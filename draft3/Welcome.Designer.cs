@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.button1 = new System.Windows.Forms.Button();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
@@ -50,11 +51,13 @@
             this.button1.Text = "Search button";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // vScrollBar1
             // 
             this.vScrollBar1.AllowDrop = true;
-            this.vScrollBar1.Location = new System.Drawing.Point(981, 49);
+            this.vScrollBar1.Location = new System.Drawing.Point(984, 49);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(26, 638);
             this.vScrollBar1.TabIndex = 1;
@@ -75,9 +78,9 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(490, 529);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 26);
+            this.textBox1.Size = new System.Drawing.Size(910, 26);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "welcome to the page";
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // progressBar1
@@ -99,18 +102,18 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "label1";
             // 
-            // Form1
+            // Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 732);
+            this.ClientSize = new System.Drawing.Size(1029, 695);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
+            this.Name = "Welcome";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
