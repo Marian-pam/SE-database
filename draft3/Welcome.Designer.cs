@@ -1,6 +1,6 @@
 ﻿namespace draft3
 {
-    partial class Form1
+    partial class Welcome
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(490, 111);
+            this.button1.Location = new System.Drawing.Point(592, 49);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 55);
             this.button1.TabIndex = 0;
@@ -93,7 +93,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(728, 181);
+            this.label1.Location = new System.Drawing.Point(133, 535);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 4;
