@@ -44,7 +44,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(592, 49);
+            this.button1.Location = new System.Drawing.Point(610, 128);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 55);
             this.button1.TabIndex = 0;
@@ -61,6 +61,7 @@
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(26, 638);
             this.vScrollBar1.TabIndex = 1;
+            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
             // 
             // directorySearcher1
             // 
@@ -85,7 +86,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(430, 402);
+            this.progressBar1.Location = new System.Drawing.Point(203, 478);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(150, 35);
@@ -96,11 +97,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(133, 535);
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Location = new System.Drawing.Point(430, 49);
+            this.label1.MaximumSize = new System.Drawing.Size(10000, 10000);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Padding = new System.Windows.Forms.Padding(5);
+            this.label1.Size = new System.Drawing.Size(117, 32);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.label1.Text = "Together Cult";
             // 
             // Welcome
             // 

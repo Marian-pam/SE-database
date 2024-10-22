@@ -16,5 +16,15 @@ namespace draft3
         {
             InitializeComponent();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
