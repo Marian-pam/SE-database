@@ -69,5 +69,15 @@ namespace draft3
             vScrollBar1.BackColor = Color.Red;
             vScrollBar1.ForeColor = Color.Red;
         }
+
+        private void progressBar1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
