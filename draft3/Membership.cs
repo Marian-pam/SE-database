@@ -16,5 +16,10 @@ namespace draft3
         {
             InitializeComponent();
         }
+
+        private void Membership_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
