@@ -105,5 +105,14 @@
   <ItemGroup>
     <None Include="Resources\A Together Culture SE Login Image.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-10-22 121824.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TC_Logos-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TC_Logos-011.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
