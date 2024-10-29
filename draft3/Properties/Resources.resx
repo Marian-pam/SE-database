@@ -118,19 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="a galaxy SE Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a galaxy SE Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="A Together Culture SE Login Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\A Together Culture SE Login Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a login icon " type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a login icon .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TC_Logos-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TC_Logos-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="A Together Culture SE Login Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\A Together Culture SE Login Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a galaxy SE Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a galaxy SE Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Screenshot 2024-10-22 121824" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-10-22 121824.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TC_Logos-011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TC_Logos-011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a padlock icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a padlock icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

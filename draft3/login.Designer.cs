@@ -39,12 +39,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.EmailTxtBox = new System.Windows.Forms.TextBox();
+            this.PasswordTxtBox = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.EmailTxtBox = new System.Windows.Forms.TextBox();
-            this.PasswordTxtBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -158,6 +158,22 @@
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // EmailTxtBox
+            // 
+            this.EmailTxtBox.Location = new System.Drawing.Point(104, 355);
+            this.EmailTxtBox.Name = "EmailTxtBox";
+            this.EmailTxtBox.Size = new System.Drawing.Size(235, 26);
+            this.EmailTxtBox.TabIndex = 19;
+            this.EmailTxtBox.TextChanged += new System.EventHandler(this.EmailTxtBox_TextChanged);
+            // 
+            // PasswordTxtBox
+            // 
+            this.PasswordTxtBox.Location = new System.Drawing.Point(104, 458);
+            this.PasswordTxtBox.Name = "PasswordTxtBox";
+            this.PasswordTxtBox.Size = new System.Drawing.Size(235, 26);
+            this.PasswordTxtBox.TabIndex = 20;
+            this.PasswordTxtBox.TextChanged += new System.EventHandler(this.PasswordTxtBox_TextChanged);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
@@ -174,17 +190,21 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::draft3.Properties.Resources.a_login_icon_;
             this.pictureBox2.Location = new System.Drawing.Point(74, 355);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::draft3.Properties.Resources.a_padlock_icon;
             this.pictureBox3.Location = new System.Drawing.Point(74, 457);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
@@ -198,22 +218,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // EmailTxtBox
-            // 
-            this.EmailTxtBox.Location = new System.Drawing.Point(104, 355);
-            this.EmailTxtBox.Name = "EmailTxtBox";
-            this.EmailTxtBox.Size = new System.Drawing.Size(235, 26);
-            this.EmailTxtBox.TabIndex = 19;
-            this.EmailTxtBox.TextChanged += new System.EventHandler(this.EmailTxtBox_TextChanged);
-            // 
-            // PasswordTxtBox
-            // 
-            this.PasswordTxtBox.Location = new System.Drawing.Point(104, 458);
-            this.PasswordTxtBox.Name = "PasswordTxtBox";
-            this.PasswordTxtBox.Size = new System.Drawing.Size(235, 26);
-            this.PasswordTxtBox.TabIndex = 20;
-            this.PasswordTxtBox.TextChanged += new System.EventHandler(this.PasswordTxtBox_TextChanged);
             // 
             // login
             // 

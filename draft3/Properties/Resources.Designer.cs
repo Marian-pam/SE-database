@@ -73,6 +73,26 @@ namespace draft3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a_login_icon_ {
+            get {
+                object obj = ResourceManager.GetObject("a login icon ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap a_padlock_icon {
+            get {
+                object obj = ResourceManager.GetObject("a padlock icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap A_Together_Culture_SE_Login_Image {
             get {
                 object obj = ResourceManager.GetObject("A Together Culture SE Login Image", resourceCulture);

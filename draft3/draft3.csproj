@@ -114,5 +114,11 @@
   <ItemGroup>
     <None Include="Resources\TC_Logos-011.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a login icon .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a padlock icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
