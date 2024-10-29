@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ForgotPassLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.EmailTxtBox = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 228);
+            this.label1.Location = new System.Drawing.Point(110, 227);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(427, 48);
             this.label1.TabIndex = 1;
@@ -64,7 +64,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(104, 485);
+            this.panel2.Location = new System.Drawing.Point(201, 482);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 2);
             this.panel2.TabIndex = 5;
@@ -74,7 +74,7 @@
             this.button2.BackColor = System.Drawing.Color.LightGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(186, 586);
+            this.button2.Location = new System.Drawing.Point(258, 584);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 40);
             this.button2.TabIndex = 7;
@@ -85,7 +85,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(74, 522);
+            this.checkBox1.Location = new System.Drawing.Point(171, 519);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(151, 24);
             this.checkBox1.TabIndex = 8;
@@ -95,7 +95,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(104, 383);
+            this.panel1.Location = new System.Drawing.Point(201, 380);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 2);
             this.panel1.TabIndex = 10;
@@ -104,7 +104,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 322);
+            this.label3.Location = new System.Drawing.Point(167, 319);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 12;
@@ -114,7 +114,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 425);
+            this.label4.Location = new System.Drawing.Point(167, 422);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 13;
@@ -124,26 +124,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 275);
+            this.label2.Location = new System.Drawing.Point(205, 275);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(210, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Enter Your Details To Log In";
             // 
-            // label5
+            // ForgotPassLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(201, 425);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 20);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Forgot Password?";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.ForgotPassLabel.AutoSize = true;
+            this.ForgotPassLabel.Location = new System.Drawing.Point(298, 422);
+            this.ForgotPassLabel.Name = "ForgotPassLabel";
+            this.ForgotPassLabel.Size = new System.Drawing.Size(138, 20);
+            this.ForgotPassLabel.TabIndex = 16;
+            this.ForgotPassLabel.Text = "Forgot Password?";
+            this.ForgotPassLabel.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(248, 22);
+            this.label6.Location = new System.Drawing.Point(351, 27);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(167, 20);
             this.label6.TabIndex = 17;
@@ -151,16 +151,17 @@
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.Location = new System.Drawing.Point(422, 17);
+            this.RegisterBtn.BackColor = System.Drawing.Color.LightGray;
+            this.RegisterBtn.Location = new System.Drawing.Point(547, 18);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(86, 29);
             this.RegisterBtn.TabIndex = 18;
             this.RegisterBtn.Text = "Register";
-            this.RegisterBtn.UseVisualStyleBackColor = true;
+            this.RegisterBtn.UseVisualStyleBackColor = false;
             // 
             // EmailTxtBox
             // 
-            this.EmailTxtBox.Location = new System.Drawing.Point(104, 355);
+            this.EmailTxtBox.Location = new System.Drawing.Point(201, 352);
             this.EmailTxtBox.Name = "EmailTxtBox";
             this.EmailTxtBox.Size = new System.Drawing.Size(235, 26);
             this.EmailTxtBox.TabIndex = 19;
@@ -168,7 +169,7 @@
             // 
             // PasswordTxtBox
             // 
-            this.PasswordTxtBox.Location = new System.Drawing.Point(104, 458);
+            this.PasswordTxtBox.Location = new System.Drawing.Point(201, 455);
             this.PasswordTxtBox.Name = "PasswordTxtBox";
             this.PasswordTxtBox.Size = new System.Drawing.Size(235, 26);
             this.PasswordTxtBox.TabIndex = 20;
@@ -180,9 +181,9 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Image = global::draft3.Properties.Resources.a_new_version_of_the_together_culture_image_for_login;
             this.pictureBox4.ImageLocation = "";
-            this.pictureBox4.Location = new System.Drawing.Point(524, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(660, 12);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(772, 640);
+            this.pictureBox4.Size = new System.Drawing.Size(636, 640);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
@@ -191,7 +192,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::draft3.Properties.Resources.a_login_icon_;
-            this.pictureBox2.Location = new System.Drawing.Point(74, 355);
+            this.pictureBox2.Location = new System.Drawing.Point(171, 352);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +202,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::draft3.Properties.Resources.a_padlock_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(74, 457);
+            this.pictureBox3.Location = new System.Drawing.Point(171, 454);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 28);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -211,7 +212,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::draft3.Properties.Resources.TC_Logos_011;
-            this.pictureBox1.Location = new System.Drawing.Point(162, 92);
+            this.pictureBox1.Location = new System.Drawing.Point(227, 90);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(177, 117);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +230,7 @@
             this.Controls.Add(this.EmailTxtBox);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.ForgotPassLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label4);
@@ -271,7 +272,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label ForgotPassLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.TextBox EmailTxtBox;
