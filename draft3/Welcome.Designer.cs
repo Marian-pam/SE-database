@@ -29,27 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.directorySearcher2 = new System.DirectoryServices.DirectorySearcher();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.label1 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.AllowDrop = true;
-            this.vScrollBar1.Location = new System.Drawing.Point(821, 9);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(26, 375);
-            this.vScrollBar1.TabIndex = 1;
-            this.vScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.vScrollBar1_Scroll);
             // 
             // directorySearcher1
             // 
@@ -63,79 +52,49 @@
             this.directorySearcher2.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher2.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Location = new System.Drawing.Point(342, 28);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.MaximumSize = new System.Drawing.Size(6667, 6500);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(3);
-            this.label1.Size = new System.Drawing.Size(137, 19);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Welcome to Together Cult";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(362, 313);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.TabIndex = 5;
-            this.progressBar1.Value = 70;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(324, 274);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 33);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Press this button to login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::draft3.Properties.Resources.TC_Logos_01;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(129, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-3, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1183, 91);
+            this.panel1.TabIndex = 8;
+            // 
             // Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(856, 393);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.vScrollBar1);
+            this.ClientSize = new System.Drawing.Size(1167, 583);
+            this.Controls.Add(this.panel1);
             this.Name = "Welcome";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.DirectoryServices.DirectorySearcher directorySearcher2;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

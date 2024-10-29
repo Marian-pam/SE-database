@@ -16,9 +16,6 @@ namespace draft3
         {
             InitializeComponent();
             // Trying to attach the event handler to the scroll bar
-            progressBar1.MouseClick += new MouseEventHandler(progressBar1_Click);
-            button1.MouseHover += new EventHandler(button1_MouseHover);
-            button1.MouseLeave += new EventHandler(button1_MouseLeave);
 
         }
 
@@ -27,62 +24,10 @@ namespace draft3
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
-        {
-            
-            button1.BackColor = Color.White; 
-            button1.ForeColor = Color.Black; 
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            button1.BackColor = Color.White;
-            button1.ForeColor = Color.Black;
-        }
-        private void button1_MouseEnter(object sender, EventArgs e)
-        {
-            button1.BackColor = System.Drawing.Color.Green;
-        }
-
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            vScrollBar1.BackColor = Color.Red;
-            vScrollBar1.ForeColor = Color.Red;
-        }
-
-        private void progressBar1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
