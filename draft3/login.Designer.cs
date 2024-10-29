@@ -178,7 +178,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Image = global::draft3.Properties.Resources.A_Together_Culture_SE_Login_Image;
+            this.pictureBox4.Image = global::draft3.Properties.Resources.a_new_version_of_the_together_culture_image_for_login;
             this.pictureBox4.ImageLocation = "";
             this.pictureBox4.Location = new System.Drawing.Point(524, 12);
             this.pictureBox4.Name = "pictureBox4";
