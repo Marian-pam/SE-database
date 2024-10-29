@@ -39,10 +39,11 @@ namespace draft3
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void ForgotPassword_Click(object sender, EventArgs e)
         {
-
+            
         }
+
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -103,5 +104,9 @@ namespace draft3
             return email == storedEmail && password == storedPassword;
         }
 
+        private void RegisterBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

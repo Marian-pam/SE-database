@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ForgotPassLabel = new System.Windows.Forms.Label();
+            this.ForgotPassword = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.EmailTxtBox = new System.Windows.Forms.TextBox();
@@ -130,20 +130,20 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Enter Your Details To Log In";
             // 
-            // ForgotPassLabel
+            // ForgotPassword
             // 
-            this.ForgotPassLabel.AutoSize = true;
-            this.ForgotPassLabel.Location = new System.Drawing.Point(298, 422);
-            this.ForgotPassLabel.Name = "ForgotPassLabel";
-            this.ForgotPassLabel.Size = new System.Drawing.Size(138, 20);
-            this.ForgotPassLabel.TabIndex = 16;
-            this.ForgotPassLabel.Text = "Forgot Password?";
-            this.ForgotPassLabel.Click += new System.EventHandler(this.label5_Click);
+            this.ForgotPassword.AutoSize = true;
+            this.ForgotPassword.Location = new System.Drawing.Point(298, 422);
+            this.ForgotPassword.Name = "ForgotPassword";
+            this.ForgotPassword.Size = new System.Drawing.Size(138, 20);
+            this.ForgotPassword.TabIndex = 16;
+            this.ForgotPassword.Text = "Forgot Password?";
+            this.ForgotPassword.Click += new System.EventHandler(this.ForgotPassword_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(351, 27);
+            this.label6.Location = new System.Drawing.Point(374, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(167, 20);
             this.label6.TabIndex = 17;
@@ -152,12 +152,14 @@
             // RegisterBtn
             // 
             this.RegisterBtn.BackColor = System.Drawing.Color.LightGray;
+            this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Location = new System.Drawing.Point(547, 18);
             this.RegisterBtn.Name = "RegisterBtn";
-            this.RegisterBtn.Size = new System.Drawing.Size(86, 29);
+            this.RegisterBtn.Size = new System.Drawing.Size(86, 35);
             this.RegisterBtn.TabIndex = 18;
             this.RegisterBtn.Text = "Register";
             this.RegisterBtn.UseVisualStyleBackColor = false;
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click_1);
             // 
             // EmailTxtBox
             // 
@@ -230,7 +232,7 @@
             this.Controls.Add(this.EmailTxtBox);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.ForgotPassLabel);
+            this.Controls.Add(this.ForgotPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label4);
@@ -272,7 +274,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label ForgotPassLabel;
+        private System.Windows.Forms.Label ForgotPassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.TextBox EmailTxtBox;
