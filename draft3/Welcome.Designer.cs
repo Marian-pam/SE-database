@@ -66,14 +66,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Location = new System.Drawing.Point(342, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.MaximumSize = new System.Drawing.Size(6667, 6500);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.label1.Size = new System.Drawing.Size(139, 21);
+            this.label1.Padding = new System.Windows.Forms.Padding(3);
+            this.label1.Size = new System.Drawing.Size(137, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Welcome to Together Cult";
             // 
@@ -110,6 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(856, 393);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
