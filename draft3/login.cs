@@ -46,5 +46,10 @@ namespace draft3
         {
 
         }
+
+        private void EmailTxtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
