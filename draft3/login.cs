@@ -39,9 +39,16 @@ namespace draft3
 
         }
 
+        private void ForgotPassword_OnMouseEnter(object sender, EventArgs e)
+        {
+            ForgotPassword.ForeColor = Color.Blue;
+        }
         private void ForgotPassword_Click(object sender, EventArgs e)
         {
-            
+           ForgotPassword.ForeColor = Color.Purple;
+           
+            ForgotPassword f2 = new ForgotPassword();
+            f2.Show();
         }
 
 
