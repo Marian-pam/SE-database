@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -49,7 +50,52 @@ namespace draft3
 
         private void EmailTxtBox_TextChanged(object sender, EventArgs e)
         {
-
+            string email = EmailTxtBox.Text;
+            if (IsValidEmail(email))
+            {
+                EmailTxtBox.ForeColor = Color.Black; // Color indicating valid input
+            }
+            else
+            {
+                EmailTxtBox.ForeColor = Color.Red; // Color indicating invalid input
+            }
         }
+
+        private bool IsValidEmail(string email)
+        {
+            
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
+
+        private void PasswordTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            string email = EmailTxtBox.Text;
+            string password = PasswordTxtBox.Text;
+
+            if (ValidateCredentials(email, password))
+            {
+                MessageBox.Show("Login Successful!");
+            }
+            else
+            {
+                MessageBox.Show("Invalid Email or Password.");
+            }
+        }
+
+        private bool ValidateCredentials(string email, string password)
+        {
+            // Replace with actual credential check (e.g., database or secure storage) this will be changed later on
+            string storedEmail = "user@example.com";
+            string storedPassword = "password123";
+
+            return email == storedEmail && password == storedPassword;
+        }
+
     }
 }

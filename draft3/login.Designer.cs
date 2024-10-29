@@ -44,7 +44,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.EmailTxtBox = new System.Windows.Forms.TextBox();
-            this.passwordTxtBox = new System.Windows.Forms.TextBox();
+            this.PasswordTxtBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -207,12 +207,13 @@
             this.EmailTxtBox.TabIndex = 19;
             this.EmailTxtBox.TextChanged += new System.EventHandler(this.EmailTxtBox_TextChanged);
             // 
-            // passwordTxtBox
+            // PasswordTxtBox
             // 
-            this.passwordTxtBox.Location = new System.Drawing.Point(104, 458);
-            this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.Size = new System.Drawing.Size(235, 26);
-            this.passwordTxtBox.TabIndex = 20;
+            this.PasswordTxtBox.Location = new System.Drawing.Point(104, 458);
+            this.PasswordTxtBox.Name = "PasswordTxtBox";
+            this.PasswordTxtBox.Size = new System.Drawing.Size(235, 26);
+            this.PasswordTxtBox.TabIndex = 20;
+            this.PasswordTxtBox.TextChanged += new System.EventHandler(this.passwordTxtBox_TextChanged);
             // 
             // login
             // 
@@ -220,7 +221,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1308, 665);
-            this.Controls.Add(this.passwordTxtBox);
+            this.Controls.Add(this.PasswordTxtBox);
             this.Controls.Add(this.EmailTxtBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -270,6 +271,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox EmailTxtBox;
-        private System.Windows.Forms.TextBox passwordTxtBox;
+        private System.Windows.Forms.TextBox PasswordTxtBox;
     }
 }
