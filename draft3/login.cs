@@ -18,6 +18,12 @@ namespace draft3
             InitializeComponent();
         }
 
+        private void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            // This will be the redirect for the register or create acc page 
+            //Register register = new Register();
+            //register.show();
+        }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 

@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.RegisterBtn = new System.Windows.Forms.Button();
             this.EmailTxtBox = new System.Windows.Forms.TextBox();
             this.PasswordTxtBox = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -149,14 +149,14 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "New to Together Cult?";
             // 
-            // button1
+            // RegisterBtn
             // 
-            this.button1.Location = new System.Drawing.Point(422, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 29);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
+            this.RegisterBtn.Location = new System.Drawing.Point(422, 17);
+            this.RegisterBtn.Name = "RegisterBtn";
+            this.RegisterBtn.Size = new System.Drawing.Size(86, 29);
+            this.RegisterBtn.TabIndex = 18;
+            this.RegisterBtn.Text = "Register";
+            this.RegisterBtn.UseVisualStyleBackColor = true;
             // 
             // EmailTxtBox
             // 
@@ -227,7 +227,7 @@
             this.ClientSize = new System.Drawing.Size(1308, 665);
             this.Controls.Add(this.PasswordTxtBox);
             this.Controls.Add(this.EmailTxtBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -273,7 +273,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.TextBox EmailTxtBox;
         private System.Windows.Forms.TextBox PasswordTxtBox;
     }
