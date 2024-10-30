@@ -71,12 +71,12 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
+            this.button2.BackColor = System.Drawing.Color.Thistle;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(258, 584);
+            this.button2.Location = new System.Drawing.Point(171, 584);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 40);
+            this.button2.Size = new System.Drawing.Size(266, 40);
             this.button2.TabIndex = 7;
             this.button2.Text = "LOGIN";
             this.button2.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@
             // ForgotPassword
             // 
             this.ForgotPassword.AutoSize = true;
-            this.ForgotPassword.BackColor = System.Drawing.Color.White;
+            this.ForgotPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(221)))));
             this.ForgotPassword.Location = new System.Drawing.Point(298, 422);
             this.ForgotPassword.Name = "ForgotPassword";
             this.ForgotPassword.Size = new System.Drawing.Size(138, 20);
@@ -152,7 +152,7 @@
             // 
             // RegisterBtn
             // 
-            this.RegisterBtn.BackColor = System.Drawing.Color.LightGray;
+            this.RegisterBtn.BackColor = System.Drawing.Color.Thistle;
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Location = new System.Drawing.Point(547, 18);
             this.RegisterBtn.Name = "RegisterBtn";
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(221)))));
             this.ClientSize = new System.Drawing.Size(1308, 665);
             this.Controls.Add(this.PasswordTxtBox);
             this.Controls.Add(this.EmailTxtBox);
