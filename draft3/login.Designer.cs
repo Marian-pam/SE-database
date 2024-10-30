@@ -76,7 +76,7 @@
             this.button2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(171, 584);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(266, 40);
+            this.button2.Size = new System.Drawing.Size(266, 45);
             this.button2.TabIndex = 7;
             this.button2.Text = "LOGIN";
             this.button2.UseVisualStyleBackColor = false;
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(221)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1308, 665);
             this.Controls.Add(this.PasswordTxtBox);
             this.Controls.Add(this.EmailTxtBox);
