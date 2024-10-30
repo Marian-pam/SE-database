@@ -133,7 +133,7 @@
             // ForgotPassword
             // 
             this.ForgotPassword.AutoSize = true;
-            this.ForgotPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(231)))), ((int)(((byte)(221)))));
+            this.ForgotPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
             this.ForgotPassword.Location = new System.Drawing.Point(298, 422);
             this.ForgotPassword.Name = "ForgotPassword";
             this.ForgotPassword.Size = new System.Drawing.Size(138, 20);

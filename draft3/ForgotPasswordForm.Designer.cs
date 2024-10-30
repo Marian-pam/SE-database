@@ -30,29 +30,42 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(290, 229);
+            this.button1.Location = new System.Drawing.Point(512, 222);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 36);
+            this.button1.Size = new System.Drawing.Size(203, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(290, 177);
+            this.maskedTextBox1.Location = new System.Drawing.Point(512, 177);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(203, 26);
             this.maskedTextBox1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(453, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(335, 39);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Forgot Your Password?";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button1);
             this.Name = "ForgotPassword";
@@ -67,5 +80,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
