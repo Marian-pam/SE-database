@@ -132,5 +132,8 @@
   <ItemGroup>
     <None Include="Resources\a new version of the together culture image for login.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a forgot passwrod image.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
