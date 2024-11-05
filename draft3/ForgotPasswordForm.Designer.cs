@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(768, 234);
+            this.maskedTextBox1.Location = new System.Drawing.Point(768, 241);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(296, 26);
             this.maskedTextBox1.TabIndex = 2;
@@ -84,12 +86,32 @@
             this.label2.Text = "Enter your email that associates with this account. We will send a verification e" +
     "mail.";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(972, 497);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 40);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Resend";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(785, 507);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Didn\'t receive the email?";
+            // 
             // ForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
             this.ClientSize = new System.Drawing.Size(1308, 665);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -112,5 +134,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
     }
 }
