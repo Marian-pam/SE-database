@@ -38,18 +38,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(512, 222);
+            this.button1.Location = new System.Drawing.Point(768, 335);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(203, 36);
+            this.button1.Size = new System.Drawing.Size(302, 62);
             this.button1.TabIndex = 0;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(512, 177);
+            this.maskedTextBox1.Location = new System.Drawing.Point(768, 234);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(203, 26);
+            this.maskedTextBox1.Size = new System.Drawing.Size(296, 26);
             this.maskedTextBox1.TabIndex = 2;
             // 
             // label1
@@ -58,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.label1.Location = new System.Drawing.Point(505, 58);
+            this.label1.Location = new System.Drawing.Point(791, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 39);
             this.label1.TabIndex = 3;
@@ -68,16 +68,16 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::draft3.Properties.Resources.a_forgot_passwrod_image;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(392, 398);
+            this.pictureBox1.Size = new System.Drawing.Size(619, 647);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(475, 112);
+            this.label2.Location = new System.Drawing.Point(764, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(300, 40);
             this.label2.TabIndex = 5;
@@ -89,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1308, 665);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
