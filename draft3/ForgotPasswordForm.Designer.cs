@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.EnterEmail = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,12 +47,13 @@
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // EnterEmail
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(768, 241);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(296, 26);
-            this.maskedTextBox1.TabIndex = 2;
+            this.EnterEmail.Location = new System.Drawing.Point(768, 267);
+            this.EnterEmail.Name = "EnterEmail";
+            this.EnterEmail.Size = new System.Drawing.Size(296, 26);
+            this.EnterEmail.TabIndex = 2;
+            this.EnterEmail.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // label1
             // 
@@ -115,7 +116,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.EnterEmail);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ForgotPassword";
@@ -130,7 +131,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox EnterEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
