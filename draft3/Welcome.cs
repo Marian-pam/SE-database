@@ -35,5 +35,10 @@ namespace draft3
             f2.Show();
             Visible = false;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
