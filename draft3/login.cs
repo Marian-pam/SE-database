@@ -49,6 +49,8 @@ namespace draft3
            
             ForgotPassword f2 = new ForgotPassword();
             f2.Show();
+
+            this.Hide();
         }
 
 
