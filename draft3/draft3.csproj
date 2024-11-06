@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="createAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="createAccount.Designer.cs">
+      <DependentUpon>createAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="createAccount.resx">
+      <DependentUpon>createAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
