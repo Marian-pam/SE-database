@@ -76,6 +76,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox5.Location = new System.Drawing.Point(53, 301);
             this.textBox5.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox5.Name = "textBox5";
@@ -86,6 +87,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox4.Location = new System.Drawing.Point(53, 152);
             this.textBox4.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox4.Name = "textBox4";
@@ -96,6 +98,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox1.Location = new System.Drawing.Point(53, 225);
             this.textBox1.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox1.Name = "textBox1";
@@ -106,6 +109,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox2.Location = new System.Drawing.Point(409, 152);
             this.textBox2.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox2.Name = "textBox2";
@@ -116,6 +120,7 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox3.Location = new System.Drawing.Point(409, 225);
             this.textBox3.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox3.Name = "textBox3";
@@ -126,6 +131,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox6.Location = new System.Drawing.Point(53, 380);
             this.textBox6.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox6.Name = "textBox6";
