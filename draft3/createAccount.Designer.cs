@@ -30,8 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.RoundedTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,22 +47,91 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // RoundedTextBox
-            // 
-            this.RoundedTextBox.Location = new System.Drawing.Point(250, 113);
-            this.RoundedTextBox.Name = "RoundedTextBox";
-            this.RoundedTextBox.Size = new System.Drawing.Size(100, 26);
-            this.RoundedTextBox.TabIndex = 1;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.RoundedTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(280, 169);
+            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Location = new System.Drawing.Point(216, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(621, 373);
+            this.groupBox1.Size = new System.Drawing.Size(827, 547);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(276, 462);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(267, 65);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Sign Up";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(53, 301);
+            this.textBox5.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(706, 50);
+            this.textBox5.TabIndex = 8;
+            this.textBox5.Text = "Email";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(53, 152);
+            this.textBox4.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(350, 50);
+            this.textBox4.TabIndex = 10;
+            this.textBox4.Text = "Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(53, 225);
+            this.textBox1.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(350, 50);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.Text = "Country";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(409, 152);
+            this.textBox2.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(350, 50);
+            this.textBox2.TabIndex = 12;
+            this.textBox2.Text = "Surname";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(409, 225);
+            this.textBox3.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(350, 50);
+            this.textBox3.TabIndex = 13;
+            this.textBox3.Text = "City";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(53, 380);
+            this.textBox6.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(706, 50);
+            this.textBox6.TabIndex = 14;
+            this.textBox6.Text = "Password";
             // 
             // createAccount
             // 
@@ -76,7 +151,13 @@
 
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox RoundedTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }

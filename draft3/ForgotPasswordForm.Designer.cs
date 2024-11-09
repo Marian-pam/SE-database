@@ -51,9 +51,9 @@
             // 
             // EnterEmail
             // 
-            this.EnterEmail.Location = new System.Drawing.Point(829, 263);
+            this.EnterEmail.Location = new System.Drawing.Point(823, 263);
             this.EnterEmail.Name = "EnterEmail";
-            this.EnterEmail.Size = new System.Drawing.Size(296, 26);
+            this.EnterEmail.Size = new System.Drawing.Size(302, 26);
             this.EnterEmail.TabIndex = 2;
             this.EnterEmail.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 

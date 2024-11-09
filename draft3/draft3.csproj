@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
-	<PropertyGroup>
-		<BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
-	</PropertyGroup>
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<Name>Database1</Name>
-		<SchemaVersion>2.0</SchemaVersion>
-		<ProjectVersion>4.1</ProjectVersion>
-		<ProjectGuid>{9b8b7b42-6d5c-4711-b7fa-567d2c0c6642}</ProjectGuid>
-		<DSP>Microsoft.Data.Tools.Schema.Sql</DSP>
-			<OutputType>WinExe</OutputType>
+  <PropertyGroup>
+    <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database1</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{F1D8B0DE-2BDF-4F42-8931-86D9C60841D2}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql</DSP>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>draft3</RootNamespace>
     <AssemblyName>draft3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
