@@ -63,6 +63,16 @@ namespace draft3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a_createAccount_background_image {
+            get {
+                object obj = ResourceManager.GetObject("a createAccount background image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap a_forgot_passwrod_image {
             get {
                 object obj = ResourceManager.GetObject("a forgot passwrod image", resourceCulture);
