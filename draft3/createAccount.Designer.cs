@@ -39,7 +39,10 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -152,6 +155,27 @@
             this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Location = new System.Drawing.Point(83, 516);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(350, 45);
+            this.panel1.TabIndex = 16;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox7.Location = new System.Drawing.Point(0, 0);
+            this.textBox7.MinimumSize = new System.Drawing.Size(350, 45);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(350, 47);
+            this.textBox7.TabIndex = 11;
+            this.textBox7.Text = "Name";
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            // 
             // createAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -159,6 +183,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1308, 665);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.Name = "createAccount";
@@ -166,6 +191,8 @@
             this.Load += new System.EventHandler(this.createAccount_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -181,5 +208,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }
