@@ -33,10 +33,11 @@ namespace draft3
 
         }
 
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void EnterEmail_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             EnterEmail.Multiline = true;
             EnterEmail.Height = 200;
+            
         }
     }
 }

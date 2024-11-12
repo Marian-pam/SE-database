@@ -164,7 +164,7 @@
             // 
             // EmailTxtBox
             // 
-            this.EmailTxtBox.Location = new System.Drawing.Point(201, 352);
+            this.EmailTxtBox.Location = new System.Drawing.Point(201, 353);
             this.EmailTxtBox.Name = "EmailTxtBox";
             this.EmailTxtBox.Size = new System.Drawing.Size(235, 26);
             this.EmailTxtBox.TabIndex = 19;

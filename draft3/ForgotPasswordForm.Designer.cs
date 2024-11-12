@@ -31,12 +31,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.EnterEmail = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.EnterEmail.Name = "EnterEmail";
             this.EnterEmail.Size = new System.Drawing.Size(302, 26);
             this.EnterEmail.TabIndex = 2;
-            this.EnterEmail.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.EnterEmail.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.EnterEmail_MaskInputRejected);
             // 
             // label1
             // 
@@ -69,16 +69,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter Your Email";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::draft3.Properties.Resources.a_forgot_passwrod_image;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(619, 647);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -125,6 +115,16 @@
             this.label4.Size = new System.Drawing.Size(177, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Don\'t have an account?";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::draft3.Properties.Resources.a_forgot_passwrod_image;
+            this.pictureBox1.Location = new System.Drawing.Point(37, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(619, 647);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // ForgotPassword
             // 
