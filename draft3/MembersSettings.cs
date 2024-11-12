@@ -26,5 +26,37 @@ namespace draft3
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;  // Show the first panel
+            panel3.Visible = false; // Hide the second panel
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;  // Show the second panel
+            panel4.Visible = false; // Hide the third panel
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
