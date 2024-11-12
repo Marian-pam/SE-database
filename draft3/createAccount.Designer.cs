@@ -40,6 +40,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +58,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -81,7 +91,7 @@
             // 
             this.textBox6.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox6.Location = new System.Drawing.Point(53, 299);
+            this.textBox6.Location = new System.Drawing.Point(53, 303);
             this.textBox6.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(706, 50);
@@ -162,7 +172,52 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(706, 50);
             this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "Password";
+            this.textBox1.Text = "Re-enter Password";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(53, 202);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(350, 2);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(409, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(350, 2);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(53, 277);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(706, 2);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(53, 356);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(706, 2);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(53, 435);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(706, 2);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "label6";
             // 
             // createAccount
             // 
@@ -197,5 +252,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
