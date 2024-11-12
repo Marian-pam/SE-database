@@ -33,14 +33,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,11 +53,10 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.button1);
@@ -83,23 +81,13 @@
             // 
             this.textBox6.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox6.Location = new System.Drawing.Point(53, 380);
+            this.textBox6.Location = new System.Drawing.Point(53, 299);
             this.textBox6.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(706, 47);
+            this.textBox6.Size = new System.Drawing.Size(706, 50);
             this.textBox6.TabIndex = 14;
             this.textBox6.Text = "Password";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox3.Location = new System.Drawing.Point(409, 225);
-            this.textBox3.MinimumSize = new System.Drawing.Size(350, 50);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(350, 47);
-            this.textBox3.TabIndex = 13;
-            this.textBox3.Text = "City";
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged_1);
             // 
             // textBox2
             // 
@@ -111,17 +99,6 @@
             this.textBox2.Size = new System.Drawing.Size(350, 47);
             this.textBox2.TabIndex = 12;
             this.textBox2.Text = "Surname";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(53, 225);
-            this.textBox1.MinimumSize = new System.Drawing.Size(350, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 47);
-            this.textBox1.TabIndex = 11;
-            this.textBox1.Text = "Country";
             // 
             // textBox4
             // 
@@ -138,10 +115,10 @@
             // 
             this.textBox5.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox5.Location = new System.Drawing.Point(53, 301);
+            this.textBox5.Location = new System.Drawing.Point(53, 224);
             this.textBox5.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(706, 47);
+            this.textBox5.Size = new System.Drawing.Size(706, 50);
             this.textBox5.TabIndex = 8;
             this.textBox5.Text = "Email";
             // 
@@ -176,6 +153,17 @@
             this.textBox7.Text = "Name";
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.Location = new System.Drawing.Point(53, 382);
+            this.textBox1.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(706, 50);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.Text = "Password";
+            // 
             // createAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -203,12 +191,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
