@@ -139,6 +139,12 @@
     <Compile Include="MembersSettings.Designer.cs">
       <DependentUpon>MembersSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payment.Designer.cs">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MembersSettings.resx">
       <DependentUpon>MembersSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserDashboard.resx">
       <DependentUpon>UserDashboard.cs</DependentUpon>
