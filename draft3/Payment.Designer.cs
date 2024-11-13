@@ -40,8 +40,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Month = new System.Windows.Forms.ListBox();
-            this.Year = new System.Windows.Forms.ListBox();
+            this.Month = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
             this.pictureBox2.Image = global::draft3.Properties.Resources.TC_Logos_011;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 28);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 39);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(118, 76);
@@ -124,7 +124,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(276, 238);
+            this.textBox2.Location = new System.Drawing.Point(276, 240);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(87, 20);
@@ -135,12 +135,13 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(158, 223);
+            this.label5.Location = new System.Drawing.Point(158, 225);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 24;
             this.label5.Text = "Expiration Date";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox3
             // 
@@ -169,7 +170,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(273, 223);
+            this.label7.Location = new System.Drawing.Point(273, 225);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 13);
@@ -179,26 +180,52 @@
             // Month
             // 
             this.Month.FormattingEnabled = true;
+            this.Month.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
             this.Month.Location = new System.Drawing.Point(161, 239);
             this.Month.Name = "Month";
-            this.Month.Size = new System.Drawing.Size(42, 95);
+            this.Month.Size = new System.Drawing.Size(55, 21);
             this.Month.TabIndex = 28;
-            this.Month.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.Month.Text = "Month";
+            this.Month.SelectedIndexChanged += new System.EventHandler(this.Month_SelectedIndexChanged);
             // 
-            // Year
+            // comboBox1
             // 
-            this.Year.FormattingEnabled = true;
-            this.Year.Location = new System.Drawing.Point(209, 239);
-            this.Year.Name = "Year";
-            this.Year.Size = new System.Drawing.Size(42, 95);
-            this.Year.TabIndex = 29;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030",
+            "2031",
+            "2032"});
+            this.comboBox1.Location = new System.Drawing.Point(222, 239);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(49, 21);
+            this.comboBox1.TabIndex = 29;
+            this.comboBox1.Text = "Year";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 432);
-            this.Controls.Add(this.Year);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Month);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -235,7 +262,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox Month;
-        private System.Windows.Forms.ListBox Year;
+        private System.Windows.Forms.ComboBox Month;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
