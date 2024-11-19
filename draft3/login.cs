@@ -69,18 +69,19 @@ namespace draft3
 
         private string HashPassword(string password)
         {
-            using (SHA256 sha256 = SHA256.Create())
+            using (SHA256 sha256Hash = SHA256.Create())
             {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(bytes);
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return BitConverter.ToString(bytes).Replace("-", "").ToLower(); // Convert to a hex string
             }
         }
+
 
         private bool ValidateCredentials(string email, string password)
         {
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Safwan\source\repos\SE-database\draft3real\draft3\togetherCulture.mdf;Integrated Security=True";
 
-            string query = "SELECT COUNT(1) FROM subscriberInfo WHERE emailId = @emailId AND password = @Password";
+            string query = "SELECT COUNT(1) FROM subscriberInfo WHERE emailId = @emailId AND password = @password";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -92,7 +93,7 @@ namespace draft3
                     {
                         // Use parameters to prevent SQL Injection
                         command.Parameters.AddWithValue("@emailId", email);
-                        command.Parameters.AddWithValue("@password", HashPassword(password));
+                        command.Parameters.AddWithValue("@password", HashPassword(password)); // If password is stored as a hash
 
                         int count = Convert.ToInt32(command.ExecuteScalar());
                         return count == 1; // Returns true if a matching record is found
@@ -100,11 +101,13 @@ namespace draft3
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Database connection error: {ex.Message}");
+                    // Log exception for debugging
+                    Console.WriteLine("Error: " + ex.Message);
                     return false;
                 }
             }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
