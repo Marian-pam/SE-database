@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
+using System.Drawing.Drawing2D;
 
 
 namespace draft3
@@ -93,24 +94,7 @@ namespace draft3
             
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
-        {
-            string email = EmailTxtBox.Text;
-            string password = PasswordTxtBox.Text;
-
-            if (ValidateCredentials(email, password))
-            {
-                MessageBox.Show("Login Successful!");
-                UserDashboard f2 = new UserDashboard();
-                f2.Show();
-
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Email or Password.");
-            }
-        }
+       
         private string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -124,8 +108,8 @@ namespace draft3
 
         private bool ValidateCredentials(string email, string password)
         {
-            // Connection string to your database (update with your actual path)
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
+        // Connection string to your database (update with your actual path)
+            string connectionString = @"Data Source=C:\Users\maria\source\repos\SE-database\4\draft3\togetherCulture.mdf;Integrated Security=True";
 
             string query = "SELECT COUNT(1) FROM subscriberInfo WHERE Email = @Email AND Password = @Password";
 
@@ -154,6 +138,7 @@ namespace draft3
             }
         }
 
+       
 
         private void RegisterBtn_Click_1(object sender, EventArgs e)
         {
@@ -161,6 +146,60 @@ namespace draft3
             f2.Show();
 
             this.Hide();
+        }
+
+        public void Login(string email, string password)
+        {
+            using (DatabaseHelper db = new DatabaseHelper())
+            {
+                try
+                {
+                    db.OpenConnection();
+
+                    string query = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
+                    SqlParameter[] parameters =
+                    {
+                        new SqlParameter("@Email", email),
+                        new SqlParameter("@Password", password)
+                    };
+
+                    DataTable result = db.ExecuteQuery(query, parameters);
+
+                    if (result.Rows.Count > 0)
+                    {
+                        Console.WriteLine("Login successful!");
+                        // Navigate to another page or perform an action
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid email or password.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            string email = EmailTxtBox.Text;
+            string password = PasswordTxtBox.Text;
+
+            if (ValidateCredentials(email, password))
+            {
+                MessageBox.Show("Login Successful!");
+                UserDashboard f2 = new UserDashboard();
+                f2.Show();
+
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Email or Password.");
+            }
         }
     }
 }
