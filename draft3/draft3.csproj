@@ -126,7 +126,7 @@
     <Compile Include="createAccount.Designer.cs">
       <DependentUpon>createAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="DatabaseHelper.cs" />
     <Compile Include="ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
