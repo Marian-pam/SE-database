@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
 using System.Security.Cryptography;
-using System.Drawing.Drawing2D;
-
+using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace draft3
 {
@@ -23,78 +16,57 @@ namespace draft3
             InitializeComponent();
         }
 
-        private void RegisterBtn_Click(object sender, EventArgs e)
-        {
-            // This will be the redirect for the register or create acc page 
-            //Register register = new Register();
-            //register.show();
-        }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ForgotPassword_OnMouseHover(object sender, EventArgs e)
         {
             ForgotPassword.ForeColor = Color.Blue;
         }
+        private void label4_Click(object sender, EventArgs e)
+        {
+            // Add relevant code here or leave empty if not required.
+        }
+
+        private void PasswordTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            // Add relevant code here or leave empty if not required.
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            // Add relevant code here or leave empty if not required.
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // Add relevant code here or leave empty if not required.
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            // Add relevant code here or leave empty if not required.
+        }
+
         private void ForgotPassword_Click(object sender, EventArgs e)
         {
-           ForgotPassword.ForeColor = Color.Purple;
-           
+            ForgotPassword.ForeColor = Color.Purple;
+
             ForgotPassword f2 = new ForgotPassword();
             f2.Show();
 
             this.Hide();
         }
 
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void EmailTxtBox_TextChanged(object sender, EventArgs e)
         {
             string email = EmailTxtBox.Text;
-            if (IsValidEmail(email))
-            {
-                EmailTxtBox.ForeColor = Color.Black; // Color indicating valid input
-            }
-            else
-            {
-                EmailTxtBox.ForeColor = Color.Red; // Color indicating invalid input
-            }
+            EmailTxtBox.ForeColor = IsValidEmail(email) ? Color.Black : Color.Red;
         }
 
         private bool IsValidEmail(string email)
         {
-            
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pattern);
         }
 
-        private void PasswordTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-       
         private string HashPassword(string password)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -104,14 +76,11 @@ namespace draft3
             }
         }
 
-
-
         private bool ValidateCredentials(string email, string password)
         {
-        // Connection string to your database (update with your actual path)
-            string connectionString = @"Data Source=C:\Users\maria\source\repos\SE-database\4\draft3\togetherCulture.mdf;Integrated Security=True";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Safwan\source\repos\SE-database\draft3real\draft3\togetherCulture.mdf;Integrated Security=True";
 
-            string query = "SELECT COUNT(1) FROM subscriberInfo WHERE Email = @Email AND Password = @Password";
+            string query = "SELECT COUNT(1) FROM subscriberInfo WHERE emailId = @emailId AND password = @Password";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -122,11 +91,10 @@ namespace draft3
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         // Use parameters to prevent SQL Injection
-                        command.Parameters.AddWithValue("@Email", email);
-                        command.Parameters.AddWithValue("@Password", password);
+                        command.Parameters.AddWithValue("@emailId", email);
+                        command.Parameters.AddWithValue("@password", HashPassword(password));
 
                         int count = Convert.ToInt32(command.ExecuteScalar());
-
                         return count == 1; // Returns true if a matching record is found
                     }
                 }
@@ -138,53 +106,8 @@ namespace draft3
             }
         }
 
-       
-
-        private void RegisterBtn_Click_1(object sender, EventArgs e)
-        {
-            createAccount f2 = new createAccount();
-            f2.Show();
-
-            this.Hide();
-        }
-
-        public void Login(string email, string password)
-        {
-            using (DatabaseHelper db = new DatabaseHelper())
-            {
-                try
-                {
-                    db.OpenConnection();
-
-                    string query = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
-                    SqlParameter[] parameters =
-                    {
-                        new SqlParameter("@Email", email),
-                        new SqlParameter("@Password", password)
-                    };
-
-                    DataTable result = db.ExecuteQuery(query, parameters);
-
-                    if (result.Rows.Count > 0)
-                    {
-                        Console.WriteLine("Login successful!");
-                        // Navigate to another page or perform an action
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid email or password.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error: {ex.Message}");
-                }
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-
             string email = EmailTxtBox.Text;
             string password = PasswordTxtBox.Text;
 
@@ -193,13 +116,19 @@ namespace draft3
                 MessageBox.Show("Login Successful!");
                 UserDashboard f2 = new UserDashboard();
                 f2.Show();
-
                 this.Hide();
             }
             else
             {
                 MessageBox.Show("Invalid Email or Password.");
             }
+        }
+
+        private void RegisterBtn_Click_1(object sender, EventArgs e)
+        {
+            createAccount f2 = new createAccount();
+            f2.Show();
+            this.Hide();
         }
     }
 }
