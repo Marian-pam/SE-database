@@ -31,22 +31,19 @@
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -77,6 +74,62 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(53, 435);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(706, 2);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "label6";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(53, 356);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(706, 2);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "label5";
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(53, 277);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(706, 2);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(409, 202);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(350, 2);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(53, 202);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(350, 2);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.Location = new System.Drawing.Point(53, 382);
+            this.textBox1.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(706, 47);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.Text = "Re-enter Password";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -94,7 +147,7 @@
             this.textBox6.Location = new System.Drawing.Point(53, 303);
             this.textBox6.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(706, 50);
+            this.textBox6.Size = new System.Drawing.Size(706, 47);
             this.textBox6.TabIndex = 14;
             this.textBox6.Text = "Password";
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged_1);
@@ -128,7 +181,7 @@
             this.textBox5.Location = new System.Drawing.Point(53, 224);
             this.textBox5.MinimumSize = new System.Drawing.Size(350, 50);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(706, 50);
+            this.textBox5.Size = new System.Drawing.Size(706, 47);
             this.textBox5.TabIndex = 8;
             this.textBox5.Text = "Email";
             // 
@@ -142,83 +195,6 @@
             this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Location = new System.Drawing.Point(83, 516);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 45);
-            this.panel1.TabIndex = 16;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox7.Location = new System.Drawing.Point(0, 0);
-            this.textBox7.MinimumSize = new System.Drawing.Size(350, 45);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(350, 47);
-            this.textBox7.TabIndex = 11;
-            this.textBox7.Text = "Name";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(53, 382);
-            this.textBox1.MinimumSize = new System.Drawing.Size(350, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(706, 50);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Text = "Re-enter Password";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(53, 202);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(350, 2);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(409, 202);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(350, 2);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(53, 277);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(706, 2);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(53, 356);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(706, 2);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(53, 435);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(706, 2);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "label6";
-            // 
             // createAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -226,7 +202,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1308, 665);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.DoubleBuffered = true;
             this.Name = "createAccount";
@@ -234,8 +209,6 @@
             this.Load += new System.EventHandler(this.createAccount_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -249,8 +222,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;

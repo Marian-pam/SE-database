@@ -8,6 +8,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
+using System.Security.Cryptography;
+
 
 namespace draft3
 {
@@ -97,21 +101,59 @@ namespace draft3
             if (ValidateCredentials(email, password))
             {
                 MessageBox.Show("Login Successful!");
+                UserDashboard f2 = new UserDashboard();
+                f2.Show();
+
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Invalid Email or Password.");
             }
         }
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return Convert.ToBase64String(bytes);
+            }
+        }
+
+
 
         private bool ValidateCredentials(string email, string password)
         {
-            // Replace with actual credential check (e.g., database or secure storage) this will be changed later on
-            string storedEmail = "user@example.com";
-            string storedPassword = "password123";
+            // Connection string to your database (update with your actual path)
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
 
-            return email == storedEmail && password == storedPassword;
+            string query = "SELECT COUNT(1) FROM subscriberInfo WHERE Email = @Email AND Password = @Password";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Use parameters to prevent SQL Injection
+                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@Password", password);
+
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+
+                        return count == 1; // Returns true if a matching record is found
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Database connection error: {ex.Message}");
+                    return false;
+                }
+            }
         }
+
 
         private void RegisterBtn_Click_1(object sender, EventArgs e)
         {
