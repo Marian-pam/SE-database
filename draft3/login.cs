@@ -115,7 +115,10 @@ namespace draft3
 
         private void RegisterBtn_Click_1(object sender, EventArgs e)
         {
+            createAccount f2 = new createAccount();
+            f2.Show();
 
+            this.Hide();
         }
     }
 }
