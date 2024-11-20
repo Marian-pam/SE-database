@@ -151,12 +151,6 @@
     <Compile Include="Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserDashboard.Designer.cs">
-      <DependentUpon>UserDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserDashboard.resx">
-      <DependentUpon>UserDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
