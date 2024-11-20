@@ -1,4 +1,6 @@
-﻿namespace draft3
+﻿using System;
+
+namespace draft3
 {
     partial class UserDashboard
     {
@@ -34,7 +36,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(288, 205);
+            this.button1.Location = new System.Drawing.Point(337, 307);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -52,6 +54,11 @@
             this.Text = "UserDashboard";
             this.ResumeLayout(false);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
