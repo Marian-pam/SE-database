@@ -57,7 +57,7 @@
             this.EnterEmail.Name = "EnterEmail";
             this.EnterEmail.Size = new System.Drawing.Size(444, 44);
             this.EnterEmail.TabIndex = 2;
-            
+            this.EnterEmail.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.EnterEmail_MaskInputRejected_1);
             // 
             // label1
             // 
@@ -70,7 +70,6 @@
             this.label1.Size = new System.Drawing.Size(240, 39);
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter Your Email";
-           
             // 
             // label2
             // 
@@ -156,7 +155,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ForgotPassword";
             this.Text = "ForgotPassword";
-            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -39,13 +39,13 @@ namespace draft3
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("SC1969@student.aru.ac.uk", "19691969"),
+                    Credentials = new NetworkCredential("Safwanchoudhury034@gmail.com", "19691969"),
                     EnableSsl = true
                 };
 
                 MailMessage mail = new MailMessage
                 {
-                    From = new MailAddress("SC1969@student.aru.ac.uk"),
+                    From = new MailAddress("Safwanchoudhury034@gmail.com"),
                     Subject = "Password Recovery",
                     Body = messageBody,
                     IsBodyHtml = true
@@ -106,6 +106,11 @@ namespace draft3
             {
                 MessageBox.Show("Please enter a valid email address.");
             }
+        }
+
+        private void EnterEmail_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }
