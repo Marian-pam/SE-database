@@ -39,13 +39,13 @@ namespace draft3
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("SC1969@student.aru.ac.com", "19691969"),
+                    Credentials = new NetworkCredential("SC1969@student.aru.ac.uk", "19691969"),
                     EnableSsl = true
                 };
 
                 MailMessage mail = new MailMessage
                 {
-                    From = new MailAddress("SC1969@student.aru.com"),
+                    From = new MailAddress("SC1969@student.aru.ac.uk"),
                     Subject = "Password Recovery",
                     Body = messageBody,
                     IsBodyHtml = true
