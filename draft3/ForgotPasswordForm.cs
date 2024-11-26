@@ -14,22 +14,20 @@ namespace draft3
         {
             InitializeComponent();
         }
-        // Triggered when the form is loaded
+        
         private void ForgotPassword_Load(object sender, EventArgs e)
         {
-            // Initialization logic, if any
         }
 
-        // Triggered when the label is clicked
         private void label1_Click(object sender, EventArgs e)
         {
-            // Add label click functionality here, if needed
+           
         }
 
-        // Triggered when the MaskedTextBox rejects input
+        
         private void EnterEmail_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            // Handle input rejection logic, if needed
+            // maybe put input rejection in this 
         }
 
         private void SendEmail(string recipientEmail, string messageBody)
@@ -39,13 +37,13 @@ namespace draft3
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("Safwanchoudhury034@gmail.com", "19691969"),
+                    Credentials = new NetworkCredential("", ""),
                     EnableSsl = true
                 };
 
                 MailMessage mail = new MailMessage
                 {
-                    From = new MailAddress("Safwanchoudhury034@gmail.com"),
+                    From = new MailAddress(""),
                     Subject = "Password Recovery",
                     Body = messageBody,
                     IsBodyHtml = true
@@ -78,12 +76,12 @@ namespace draft3
 
                         if (count == 1)
                         {
-                            string messageBody = "We have received a request to reset your password. Please contact us for further assistance.";
+                            string messageBody = "Your request has been rejected. Please try again or request assistance.";
                             SendEmail(enteredEmail, messageBody);
                         }
                         else
                         {
-                            MessageBox.Show("Email not found in our records.");
+                            MessageBox.Show("Email has not been found.");
                         }
                     }
                 }

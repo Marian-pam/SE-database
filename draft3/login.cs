@@ -91,7 +91,7 @@ namespace draft3
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Use parameters to prevent SQL Injection
+                        
                         command.Parameters.AddWithValue("@emailId", email);
                         command.Parameters.AddWithValue("@password", HashPassword(password)); // If password is stored as a hash
 
@@ -117,7 +117,7 @@ namespace draft3
             if (ValidateCredentials(email, password))
             {
                 MessageBox.Show("Login Successful!");
-                UserDashboard f2 = new UserDashboard();
+                AdminDashboard f2 = new AdminDashboard();
                 f2.Show();
                 this.Hide();
             }
