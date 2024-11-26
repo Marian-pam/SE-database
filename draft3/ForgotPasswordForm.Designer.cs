@@ -36,16 +36,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(758, 325);
+            this.button1.Location = new System.Drawing.Point(754, 325);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(439, 62);
+            this.button1.Size = new System.Drawing.Size(443, 62);
             this.button1.TabIndex = 0;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = true;
@@ -117,16 +115,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Don\'t have an account?";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::draft3.Properties.Resources.a_forgot_passwrod_image;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(619, 647);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Black;
@@ -140,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1308, 665);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -148,14 +136,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EnterEmail);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ForgotPassword";
             this.Text = "ForgotPassword";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,7 +152,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox EnterEmail;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;

@@ -91,7 +91,7 @@ namespace draft3
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Use parameters to prevent SQL Injection
+                        
                         command.Parameters.AddWithValue("@emailId", email);
                         command.Parameters.AddWithValue("@password", HashPassword(password)); // If password is stored as a hash
 
