@@ -127,6 +127,12 @@
       <DependentUpon>createAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
     <Compile Include="ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,11 @@
     </Compile>
     <Compile Include="Payment.Designer.cs">
       <DependentUpon>Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="togetherCultureDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>togetherCultureDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -176,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="createAccount.resx">
       <DependentUpon>createAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
@@ -215,6 +229,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="togetherCultureDataSet.xsc">
+      <DependentUpon>togetherCultureDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="togetherCultureDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>togetherCultureDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="togetherCultureDataSet.xss">
+      <DependentUpon>togetherCultureDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

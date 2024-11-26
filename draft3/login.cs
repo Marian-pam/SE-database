@@ -117,7 +117,7 @@ namespace draft3
             if (ValidateCredentials(email, password))
             {
                 MessageBox.Show("Login Successful!");
-                UserDashboard f2 = new UserDashboard();
+                AdminDashboard f2 = new AdminDashboard();
                 f2.Show();
                 this.Hide();
             }
