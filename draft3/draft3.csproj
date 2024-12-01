@@ -305,6 +305,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\channels4_profile.jpg" />
+    <None Include="Resources\Screenshot 2024-12-01 200452.png" />
+    <None Include="Resources\Screenshot 2024-12-01 200551.png" />
     <Content Include="togetherCulture.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

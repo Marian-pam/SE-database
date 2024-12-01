@@ -133,9 +133,39 @@ namespace draft3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap channels4_profile {
+            get {
+                object obj = ResourceManager.GetObject("channels4_profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2024_10_22_121824 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-10-22 121824", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_12_01_200452 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-12-01 200452", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_12_01_200551 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-12-01 200551", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
