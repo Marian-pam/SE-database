@@ -1,76 +1,45 @@
 ﻿using System;
-using System.Data;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
-namespace draft3
+namespace YourNamespace
 {
-    public class DatabaseHelper : IDisposable
+    public static class DatabaseHelper
     {
-        private readonly SqlConnection _connection;
+        private static readonly string ConnectionString =
+            System.Configuration.ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString"].ConnectionString;
 
-        // Constructor to initialize the connection
-        public DatabaseHelper()
+        /// <summary>
+        /// Executes a query and returns a list of results.
+        /// </summary>
+        /// <param name="query">The SQL query to execute.</param>
+        /// <param name="columnName">The column name to extract data from.</param>
+        /// <returns>A list of string data from the specified column.</returns>
+        public static List<string> GetData(string query, string columnName)
         {
-            // Update the connection string as needed
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True;Connect Timeout=30;";
-            _connection = new SqlConnection(connectionString);
-        }
+            List<string> dataList = new List<string>();
 
-        // Open the database connection
-        public void OpenConnection()
-        {
-            if (_connection.State == ConnectionState.Closed)
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                _connection.Open();
-            }
-        }
-
-        // Close the database connection
-        public void CloseConnection()
-        {
-            if (_connection.State == ConnectionState.Open)
-            {
-                _connection.Close();
-            }
-        }
-
-        // Execute a query (INSERT, UPDATE, DELETE)
-        public int ExecuteNonQuery(string query, SqlParameter[] parameters = null)
-        {
-            using (SqlCommand cmd = new SqlCommand(query, _connection))
-            {
-                if (parameters != null)
+                SqlCommand command = new SqlCommand(query, connection);
+                try
                 {
-                    cmd.Parameters.AddRange(parameters);
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        dataList.Add(reader[columnName].ToString());
+                    }
+                    reader.Close();
                 }
-                return cmd.ExecuteNonQuery();
-            }
-        }
-
-        // Execute a SELECT query and return a DataTable
-        public DataTable ExecuteQuery(string query, SqlParameter[] parameters = null)
-        {
-            using (SqlCommand cmd = new SqlCommand(query, _connection))
-            {
-                if (parameters != null)
+                catch (Exception ex)
                 {
-                    cmd.Parameters.AddRange(parameters);
-                }
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                {
-                    DataTable result = new DataTable();
-                    adapter.Fill(result);
-                    return result;
+                    // Log or handle the exception as needed
+                    Console.WriteLine($"Error: {ex.Message}");
                 }
             }
-        }
 
-        // Implement IDisposable to clean up resources
-        public void Dispose()
-        {
-            CloseConnection();
-            _connection.Dispose();
+            return dataList;
         }
     }
 }
