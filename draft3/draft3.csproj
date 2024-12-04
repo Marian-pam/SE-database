@@ -145,23 +145,11 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminSettings.Designer.cs">
-      <DependentUpon>AdminSettings.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserSettings.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserSettings.Designer.cs">
       <DependentUpon>UserSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MembersSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MembersSettings.Designer.cs">
-      <DependentUpon>MembersSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Payment.cs">
       <SubType>Form</SubType>
@@ -197,9 +185,6 @@
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminSettings.resx">
-      <DependentUpon>AdminSettings.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="createAccount.resx">
       <DependentUpon>createAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,9 +196,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Membership.resx">
       <DependentUpon>Membership.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MembersSettings.resx">
-      <DependentUpon>MembersSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
