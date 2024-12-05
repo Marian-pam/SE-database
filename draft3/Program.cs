@@ -16,7 +16,7 @@ namespace draft3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Events());
+            Application.Run(new login());
         }
     }
 }

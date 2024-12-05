@@ -1,41 +1,26 @@
 ﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Security.Cryptography;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace draft3
 {
     public partial class login : Form
     {
+        // Database connection string
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\maria\source\repos\SE-database\4\draft3\togetherCulture.mdf;Integrated Security=True";
+
         public login()
         {
             InitializeComponent();
         }
 
-        private void ForgotPassword_OnMouseHover(object sender, EventArgs e)
-        {
-            ForgotPassword.ForeColor = Color.Blue;
-        }
         private void label4_Click(object sender, EventArgs e)
         {
             // Add relevant code here or leave empty if not required.
         }
 
         private void PasswordTxtBox_TextChanged(object sender, EventArgs e)
-        {
-            // Add relevant code here or leave empty if not required.
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            // Add relevant code here or leave empty if not required.
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
         {
             // Add relevant code here or leave empty if not required.
         }
@@ -47,91 +32,61 @@ namespace draft3
 
         private void ForgotPassword_Click(object sender, EventArgs e)
         {
-            ForgotPassword.ForeColor = Color.Purple;
-
-            ForgotPassword f2 = new ForgotPassword();
-            f2.Show();
-
-            this.Hide();
+            // Code for forgot password functionality can go here.
         }
 
         private void EmailTxtBox_TextChanged(object sender, EventArgs e)
         {
-            string email = EmailTxtBox.Text;
-            EmailTxtBox.ForeColor = IsValidEmail(email) ? Color.Black : Color.Red;
+            // Add relevant code here or leave empty if not required.
         }
-
-        private bool IsValidEmail(string email)
-        {
-            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            return Regex.IsMatch(email, pattern);
-        }
-
-        private string HashPassword(string password)
-        {
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(bytes).Replace("-", "").ToLower(); // Convert to a hex string
-            }
-        }
-
-
-        private bool ValidateCredentials(string email, string password)
-        {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Safwan\source\repos\SE-database\draft3real\draft3\togetherCulture.mdf;Integrated Security=True";
-
-            string query = "SELECT COUNT(1) FROM subscriberInfo WHERE emailId = @emailId AND password = @password";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        
-                        command.Parameters.AddWithValue("@emailId", email);
-                        command.Parameters.AddWithValue("@password", HashPassword(password)); // If password is stored as a hash
-
-                        int count = Convert.ToInt32(command.ExecuteScalar());
-                        return count == 1; // Returns true if a matching record is found
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // Log exception for debugging
-                    Console.WriteLine("Error: " + ex.Message);
-                    return false;
-                }
-            }
-        }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string email = EmailTxtBox.Text;
-            string password = PasswordTxtBox.Text;
+            // Login button logic
+            string email = EmailTxtBox.Text.Trim();
+            string password = PasswordTxtBox.Text.Trim();
 
-            if (ValidateCredentials(email, password))
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Login Successful!");
-                AdminDashboard f2 = new AdminDashboard();
-                f2.Show();
-                this.Hide();
+                MessageBox.Show("Please enter both email and password.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            try
             {
-                MessageBox.Show("Invalid Email or Password.");
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    string query = "SELECT COUNT(1) FROM subscriberInfo WHERE emailid = @Email AND password = @Password";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@Email", email);
+                        cmd.Parameters.AddWithValue("@Password", password);
+
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        if (count == 1)
+                        {
+                            MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            AdminDashboard adminDashboard = new AdminDashboard();
+                            this.Hide();
+                            adminDashboard.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid email or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void RegisterBtn_Click_1(object sender, EventArgs e)
         {
-            createAccount f2 = new createAccount();
-            f2.Show();
-            this.Hide();
+            // Redirect to registration form if applicable
         }
     }
 }
