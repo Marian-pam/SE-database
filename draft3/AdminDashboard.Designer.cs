@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 1080);
+            this.panel1.Size = new System.Drawing.Size(350, 1061);
             this.panel1.TabIndex = 0;
             // 
             // button6
@@ -75,7 +75,7 @@
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(15, 1030);
+            this.button6.Location = new System.Drawing.Point(15, 1011);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(320, 50);
             this.button6.TabIndex = 9;
@@ -166,6 +166,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Events";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -173,7 +174,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(335, 206);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(15, 874);
+            this.panel4.Size = new System.Drawing.Size(15, 855);
             this.panel4.TabIndex = 3;
             // 
             // panel3
@@ -181,7 +182,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 206);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(15, 874);
+            this.panel3.Size = new System.Drawing.Size(15, 855);
             this.panel3.TabIndex = 2;
             // 
             // panel2
@@ -215,9 +216,9 @@
             // 
             // AdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1061);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
