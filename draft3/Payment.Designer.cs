@@ -39,8 +39,8 @@
             this.cardNameTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Month = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.monthSelect = new System.Windows.Forms.ComboBox();
+            this.yearSelect = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -55,10 +55,10 @@
             this.returnPayment = new System.Windows.Forms.Button();
             this.FullNameTxt = new System.Windows.Forms.TextBox();
             this.EmailAddressTxt = new System.Windows.Forms.TextBox();
-            this.MembershipType = new System.Windows.Forms.TextBox();
             this.totalPrice = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.linkLabelPAY = new System.Windows.Forms.LinkLabel();
+            this.membershipSelect = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -187,10 +187,10 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "CVV";
             // 
-            // Month
+            // monthSelect
             // 
-            this.Month.FormattingEnabled = true;
-            this.Month.Items.AddRange(new object[] {
+            this.monthSelect.FormattingEnabled = true;
+            this.monthSelect.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
@@ -203,17 +203,17 @@
             "10",
             "11",
             "12"});
-            this.Month.Location = new System.Drawing.Point(546, 150);
-            this.Month.Name = "Month";
-            this.Month.Size = new System.Drawing.Size(55, 21);
-            this.Month.TabIndex = 28;
-            this.Month.Text = "Month";
-            this.Month.SelectedIndexChanged += new System.EventHandler(this.Month_SelectedIndexChanged);
+            this.monthSelect.Location = new System.Drawing.Point(546, 150);
+            this.monthSelect.Name = "monthSelect";
+            this.monthSelect.Size = new System.Drawing.Size(55, 21);
+            this.monthSelect.TabIndex = 28;
+            this.monthSelect.Text = "Month";
+            this.monthSelect.SelectedIndexChanged += new System.EventHandler(this.Month_SelectedIndexChanged);
             // 
-            // comboBox1
+            // yearSelect
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.yearSelect.FormattingEnabled = true;
+            this.yearSelect.Items.AddRange(new object[] {
             "2024",
             "2025",
             "2026",
@@ -223,12 +223,12 @@
             "2030",
             "2031",
             "2032"});
-            this.comboBox1.Location = new System.Drawing.Point(607, 150);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(49, 21);
-            this.comboBox1.TabIndex = 29;
-            this.comboBox1.Text = "Year";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.yearSelect.Location = new System.Drawing.Point(607, 150);
+            this.yearSelect.Name = "yearSelect";
+            this.yearSelect.Size = new System.Drawing.Size(49, 21);
+            this.yearSelect.TabIndex = 29;
+            this.yearSelect.Text = "Year";
+            this.yearSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // pictureBox3
             // 
@@ -292,6 +292,7 @@
             this.payNow.TabIndex = 35;
             this.payNow.Text = "Pay Now";
             this.payNow.UseVisualStyleBackColor = false;
+            this.payNow.Click += new System.EventHandler(this.payNow_Click_1);
             // 
             // label1
             // 
@@ -384,14 +385,6 @@
             this.EmailAddressTxt.Size = new System.Drawing.Size(202, 20);
             this.EmailAddressTxt.TabIndex = 43;
             // 
-            // MembershipType
-            // 
-            this.MembershipType.Location = new System.Drawing.Point(157, 294);
-            this.MembershipType.Margin = new System.Windows.Forms.Padding(2);
-            this.MembershipType.Name = "MembershipType";
-            this.MembershipType.Size = new System.Drawing.Size(131, 20);
-            this.MembershipType.TabIndex = 44;
-            // 
             // totalPrice
             // 
             this.totalPrice.Location = new System.Drawing.Point(157, 321);
@@ -400,6 +393,7 @@
             this.totalPrice.Name = "totalPrice";
             this.totalPrice.Size = new System.Drawing.Size(131, 20);
             this.totalPrice.TabIndex = 45;
+            this.totalPrice.TextChanged += new System.EventHandler(this.totalPrice_TextChanged);
             // 
             // label12
             // 
@@ -424,15 +418,28 @@
             this.linkLabelPAY.TabStop = true;
             this.linkLabelPAY.Text = "Return";
             // 
+            // membershipSelect
+            // 
+            this.membershipSelect.FormattingEnabled = true;
+            this.membershipSelect.Items.AddRange(new object[] {
+            "Community",
+            "Workspace"});
+            this.membershipSelect.Location = new System.Drawing.Point(157, 294);
+            this.membershipSelect.Name = "membershipSelect";
+            this.membershipSelect.Size = new System.Drawing.Size(131, 21);
+            this.membershipSelect.TabIndex = 48;
+            this.membershipSelect.Text = "Membership Type";
+            this.membershipSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 432);
+            this.Controls.Add(this.membershipSelect);
             this.Controls.Add(this.linkLabelPAY);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.totalPrice);
-            this.Controls.Add(this.MembershipType);
             this.Controls.Add(this.EmailAddressTxt);
             this.Controls.Add(this.FullNameTxt);
             this.Controls.Add(this.returnPayment);
@@ -446,8 +453,8 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Month);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.monthSelect);
+            this.Controls.Add(this.yearSelect);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cvvTxt);
             this.Controls.Add(this.label6);
@@ -483,8 +490,8 @@
         private System.Windows.Forms.TextBox cardNameTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox Month;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox monthSelect;
+        private System.Windows.Forms.ComboBox yearSelect;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -499,9 +506,9 @@
         private System.Windows.Forms.Button returnPayment;
         private System.Windows.Forms.TextBox FullNameTxt;
         private System.Windows.Forms.TextBox EmailAddressTxt;
-        private System.Windows.Forms.TextBox MembershipType;
         private System.Windows.Forms.TextBox totalPrice;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.LinkLabel linkLabelPAY;
+        private System.Windows.Forms.ComboBox membershipSelect;
     }
 }
