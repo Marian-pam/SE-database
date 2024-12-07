@@ -32,11 +32,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.EmailTxtBox = new System.Windows.Forms.TextBox();
+            this.cardNumTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cvvTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cardNameTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Month = new System.Windows.Forms.ComboBox();
@@ -46,17 +46,17 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.payNow = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.returnPayment = new System.Windows.Forms.Button();
+            this.FullNameTxt = new System.Windows.Forms.TextBox();
+            this.EmailAddressTxt = new System.Windows.Forms.TextBox();
+            this.MembershipType = new System.Windows.Forms.TextBox();
+            this.totalPrice = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.linkLabelPAY = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,13 +111,13 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Become a community member today!";
             // 
-            // EmailTxtBox
+            // cardNumTxt
             // 
-            this.EmailTxtBox.Location = new System.Drawing.Point(546, 76);
-            this.EmailTxtBox.Margin = new System.Windows.Forms.Padding(2);
-            this.EmailTxtBox.Name = "EmailTxtBox";
-            this.EmailTxtBox.Size = new System.Drawing.Size(202, 20);
-            this.EmailTxtBox.TabIndex = 20;
+            this.cardNumTxt.Location = new System.Drawing.Point(546, 76);
+            this.cardNumTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.cardNumTxt.Name = "cardNumTxt";
+            this.cardNumTxt.Size = new System.Drawing.Size(202, 20);
+            this.cardNumTxt.TabIndex = 20;
             // 
             // label4
             // 
@@ -132,13 +132,13 @@
             this.label4.Text = "Card Number";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox2
+            // cvvTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(696, 151);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(52, 20);
-            this.textBox2.TabIndex = 23;
+            this.cvvTxt.Location = new System.Drawing.Point(696, 151);
+            this.cvvTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.cvvTxt.Name = "cvvTxt";
+            this.cvvTxt.Size = new System.Drawing.Size(52, 20);
+            this.cvvTxt.TabIndex = 23;
             // 
             // label5
             // 
@@ -153,14 +153,14 @@
             this.label5.Text = "Expiration Date";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox3
+            // cardNameTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(546, 115);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(202, 20);
-            this.textBox3.TabIndex = 25;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.cardNameTxt.Location = new System.Drawing.Point(546, 115);
+            this.cardNameTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.cardNameTxt.Name = "cardNameTxt";
+            this.cardNameTxt.Size = new System.Drawing.Size(202, 20);
+            this.cardNameTxt.TabIndex = 25;
+            this.cardNameTxt.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label6
             // 
@@ -282,16 +282,16 @@
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // button1
+            // payNow
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(595, 297);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 45);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Pay Now";
-            this.button1.UseVisualStyleBackColor = false;
+            this.payNow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.payNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payNow.Location = new System.Drawing.Point(595, 297);
+            this.payNow.Name = "payNow";
+            this.payNow.Size = new System.Drawing.Size(129, 45);
+            this.payNow.TabIndex = 35;
+            this.payNow.Text = "Pay Now";
+            this.payNow.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -357,49 +357,49 @@
             this.label11.Text = "Changed your mind?\r\n";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // button2
+            // returnPayment
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(779, 397);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 23);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Return";
-            this.button2.UseVisualStyleBackColor = false;
+            this.returnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.returnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.returnPayment.Location = new System.Drawing.Point(779, 397);
+            this.returnPayment.Name = "returnPayment";
+            this.returnPayment.Size = new System.Drawing.Size(81, 23);
+            this.returnPayment.TabIndex = 41;
+            this.returnPayment.Text = "Return";
+            this.returnPayment.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // FullNameTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(46, 152);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(202, 20);
-            this.textBox4.TabIndex = 42;
+            this.FullNameTxt.Location = new System.Drawing.Point(46, 152);
+            this.FullNameTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.FullNameTxt.Name = "FullNameTxt";
+            this.FullNameTxt.Size = new System.Drawing.Size(202, 20);
+            this.FullNameTxt.TabIndex = 42;
             // 
-            // textBox5
+            // EmailAddressTxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(46, 204);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(202, 20);
-            this.textBox5.TabIndex = 43;
+            this.EmailAddressTxt.Location = new System.Drawing.Point(46, 204);
+            this.EmailAddressTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.EmailAddressTxt.Name = "EmailAddressTxt";
+            this.EmailAddressTxt.Size = new System.Drawing.Size(202, 20);
+            this.EmailAddressTxt.TabIndex = 43;
             // 
-            // textBox6
+            // MembershipType
             // 
-            this.textBox6.Location = new System.Drawing.Point(157, 294);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(131, 20);
-            this.textBox6.TabIndex = 44;
+            this.MembershipType.Location = new System.Drawing.Point(157, 294);
+            this.MembershipType.Margin = new System.Windows.Forms.Padding(2);
+            this.MembershipType.Name = "MembershipType";
+            this.MembershipType.Size = new System.Drawing.Size(131, 20);
+            this.MembershipType.TabIndex = 44;
             // 
-            // textBox7
+            // totalPrice
             // 
-            this.textBox7.Location = new System.Drawing.Point(157, 321);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.MaximumSize = new System.Drawing.Size(1000, 1000);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(131, 20);
-            this.textBox7.TabIndex = 45;
+            this.totalPrice.Location = new System.Drawing.Point(157, 321);
+            this.totalPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.totalPrice.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.totalPrice.Name = "totalPrice";
+            this.totalPrice.Size = new System.Drawing.Size(131, 20);
+            this.totalPrice.TabIndex = 45;
             // 
             // label12
             // 
@@ -431,17 +431,17 @@
             this.ClientSize = new System.Drawing.Size(872, 432);
             this.Controls.Add(this.linkLabelPAY);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.totalPrice);
+            this.Controls.Add(this.MembershipType);
+            this.Controls.Add(this.EmailAddressTxt);
+            this.Controls.Add(this.FullNameTxt);
+            this.Controls.Add(this.returnPayment);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.payNow);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.textBox1);
@@ -449,11 +449,11 @@
             this.Controls.Add(this.Month);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cvvTxt);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cardNameTxt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.EmailTxtBox);
+            this.Controls.Add(this.cardNumTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
@@ -476,11 +476,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox EmailTxtBox;
+        private System.Windows.Forms.TextBox cardNumTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cvvTxt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cardNameTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox Month;
@@ -490,17 +490,17 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button payNow;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button returnPayment;
+        private System.Windows.Forms.TextBox FullNameTxt;
+        private System.Windows.Forms.TextBox EmailAddressTxt;
+        private System.Windows.Forms.TextBox MembershipType;
+        private System.Windows.Forms.TextBox totalPrice;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.LinkLabel linkLabelPAY;
     }
