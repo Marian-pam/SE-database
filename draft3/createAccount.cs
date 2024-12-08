@@ -49,6 +49,13 @@ namespace draft3
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            login f2 = new login();
+            f2.Show();
+            Visible = false;
+        }
     }
     
 }

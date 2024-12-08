@@ -110,5 +110,19 @@ namespace draft3
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            createAccount f2 = new createAccount();
+            f2.Show();
+            Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            login f2 = new login();
+            f2.Show();
+            Visible = false;
+        }
     }
 }
