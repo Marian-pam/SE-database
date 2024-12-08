@@ -43,7 +43,7 @@ namespace draft3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Payment f2 = new Payment();
+            Membership f2 = new Membership();
             f2.Show();
             Visible = false;
         }
