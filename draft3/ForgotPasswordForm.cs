@@ -14,20 +14,17 @@ namespace draft3
         {
             InitializeComponent();
         }
-        
+
         private void ForgotPassword_Load(object sender, EventArgs e)
         {
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
         }
 
-        
         private void EnterEmail_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            // maybe put input rejection in this 
         }
 
         private void SendEmail(string recipientEmail, string messageBody)
@@ -37,13 +34,13 @@ namespace draft3
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("", ""),
+                    Credentials = new NetworkCredential("your-email@gmail.com", "your-email-password"),
                     EnableSsl = true
                 };
 
                 MailMessage mail = new MailMessage
                 {
-                    From = new MailAddress(""),
+                    From = new MailAddress("your-email@gmail.com"),
                     Subject = "Password Recovery",
                     Body = messageBody,
                     IsBodyHtml = true
@@ -60,28 +57,37 @@ namespace draft3
             }
         }
 
-        private void ValidateEmailAndSend(string enteredEmail)
+        private void ValidateEmailAndSave(string enteredEmail, string password)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    string query = "SELECT COUNT(1) FROM subscriberInfo WHERE emailId = @emailId";
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    // Check if the email already exists
+                    string queryCheck = "SELECT COUNT(1) FROM subscriberInfo WHERE emailId = @Email";
+                    using (SqlCommand commandCheck = new SqlCommand(queryCheck, connection))
                     {
-                        command.Parameters.AddWithValue("@emailId", enteredEmail);
-                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        commandCheck.Parameters.AddWithValue("@Email", enteredEmail);
+                        int count = Convert.ToInt32(commandCheck.ExecuteScalar());
 
-                        if (count == 1)
+                        if (count == 0)
                         {
-                            string messageBody = "Your request has been rejected. Please try again or request assistance.";
-                            SendEmail(enteredEmail, messageBody);
+                            // Insert new email and password into the table
+                            string queryInsert = "INSERT INTO subscriberInfo (emailId, password) VALUES (@Email, @Password)";
+                            using (SqlCommand commandInsert = new SqlCommand(queryInsert, connection))
+                            {
+                                commandInsert.Parameters.AddWithValue("@Email", enteredEmail);
+                                commandInsert.Parameters.AddWithValue("@Password", password);
+                                commandInsert.ExecuteNonQuery();
+
+                                MessageBox.Show("Your credentials have been saved.");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Email has not been found.");
+                            MessageBox.Show("Email already exists in the database.");
                         }
                     }
                 }
@@ -95,10 +101,15 @@ namespace draft3
         private void ForgotPasswordButton_Click(object sender, EventArgs e)
         {
             string enteredEmail = EnterEmail.Text;
+            string password = "defaultPassword123"; // Replace with logic to securely generate a new password or take user input.
 
             if (!string.IsNullOrWhiteSpace(enteredEmail))
             {
-                ValidateEmailAndSend(enteredEmail);
+                ValidateEmailAndSave(enteredEmail, password);
+
+                // Optionally send the password via email
+                string messageBody = $"Your account has been registered. Your password is: {password}";
+                SendEmail(enteredEmail, messageBody);
             }
             else
             {
@@ -108,7 +119,6 @@ namespace draft3
 
         private void EnterEmail_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
         {
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -127,7 +137,7 @@ namespace draft3
 
         private void ForgotPassword_Load_1(object sender, EventArgs e)
         {
-
         }
     }
 }
+
