@@ -124,5 +124,10 @@ namespace draft3
             f2.Show();
             Visible = false;
         }
+
+        private void ForgotPassword_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

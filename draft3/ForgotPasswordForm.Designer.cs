@@ -167,6 +167,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ForgotPassword";
             this.Text = "ForgotPassword";
+            this.Load += new System.EventHandler(this.ForgotPassword_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
