@@ -174,11 +174,6 @@ namespace draft3
 
         }
 
-        private void cvvTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cvvTxt_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -186,8 +181,7 @@ namespace draft3
                 e.Handled = true;
             }
         }
-
-        private void cvvTxt_TextChanged(object sender, KeyPressEventArgs e)
+        private void cvvTxt_TextChanged(object sender, EventArgs e)
         {
             if (cvvTxt.Text.Length > 3)
             {
@@ -195,5 +189,6 @@ namespace draft3
                 cvvTxt.SelectionStart = cvvTxt.Text.Length;
             }
         }
+
     }
 }
