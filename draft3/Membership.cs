@@ -59,7 +59,7 @@ namespace draft3
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Month_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,5 +190,26 @@ namespace draft3
             }
         }
 
+        private void textBox3_TextChange(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void cardNumTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cardNumTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (cardNumTxt.Text.Length > 16)
+            {
+                cardNumTxt.Text = cardNumTxt.Text.Substring(0, 16);
+                cardNumTxt.SelectionStart = cardNumTxt.Text.Length;
+            }
+        }
     }
 }

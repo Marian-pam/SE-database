@@ -118,6 +118,8 @@
             this.cardNumTxt.Name = "cardNumTxt";
             this.cardNumTxt.Size = new System.Drawing.Size(202, 20);
             this.cardNumTxt.TabIndex = 20;
+            this.cardNumTxt.TextChanged += new System.EventHandler(this.cardNumTxt_TextChanged);
+            this.cardNumTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cardNumTxt_KeyPress);
             // 
             // label4
             // 
@@ -163,6 +165,7 @@
             this.cardNameTxt.Size = new System.Drawing.Size(202, 20);
             this.cardNameTxt.TabIndex = 25;
             this.cardNameTxt.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.cardNameTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_TextChange);
             // 
             // label6
             // 
