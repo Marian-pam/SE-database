@@ -139,6 +139,8 @@
             this.cvvTxt.Name = "cvvTxt";
             this.cvvTxt.Size = new System.Drawing.Size(52, 20);
             this.cvvTxt.TabIndex = 23;
+            this.cvvTxt.TextChanged += new System.EventHandler(this.cvvTxt_TextChanged);
+            this.cvvTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cvvTxt_KeyPress);
             // 
             // label5
             // 
@@ -369,7 +371,9 @@
             this.returnPayment.TabIndex = 41;
             this.returnPayment.Text = "Return";
             this.returnPayment.UseVisualStyleBackColor = false;
+            this.returnPayment.TextChanged += new System.EventHandler(this.cvvTxt_TextChanged);
             this.returnPayment.Click += new System.EventHandler(this.returnPayment_Click);
+            this.returnPayment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cvvTxt_TextChanged);
             // 
             // FullNameTxt
             // 
@@ -434,7 +438,7 @@
             this.membershipSelect.Text = "Membership Type";
             this.membershipSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // Payment
+            // Membership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -470,7 +474,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
-            this.Name = "Payment";
+            this.Name = "Membership";
             this.Text = "Payment";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
