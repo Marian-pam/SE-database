@@ -150,6 +150,8 @@ namespace draft3
             string cardNumber = cardNumTxt.Text;
             string cvv = cvvTxt.Text;
             string cardHolderName = cardNameTxt.Text;
+            string selectedMonth = monthSelect.SelectedItem?.ToString();
+            string selectedYear = yearSelect.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(membershipType) || membershipType == "None")
             {
@@ -169,6 +171,16 @@ namespace draft3
             if (string.IsNullOrEmpty(cardHolderName))
             {
                 MessageBox.Show("Please enter the cardholder name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(selectedMonth))
+            {
+                MessageBox.Show("Please select a month.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(selectedYear))
+            {
+                MessageBox.Show("Please select a year.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             UserSettings userSettingsForm = new UserSettings();
