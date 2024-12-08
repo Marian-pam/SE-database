@@ -44,6 +44,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.textBox3DOB = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Maroon;
+            this.groupBox1.Controls.Add(this.textBox3DOB);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -70,7 +72,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(216, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(826, 548);
+            this.groupBox1.Size = new System.Drawing.Size(826, 599);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -129,6 +131,7 @@
             this.textBox1.Size = new System.Drawing.Size(706, 47);
             this.textBox1.TabIndex = 16;
             this.textBox1.Text = "Re-enter Password";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1Password2);
             // 
             // label1
             // 
@@ -150,7 +153,7 @@
             this.textBox6.Size = new System.Drawing.Size(706, 47);
             this.textBox6.TabIndex = 14;
             this.textBox6.Text = "Password";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged_1);
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6Password);
             // 
             // textBox2
             // 
@@ -162,7 +165,7 @@
             this.textBox2.Size = new System.Drawing.Size(350, 47);
             this.textBox2.TabIndex = 12;
             this.textBox2.Text = "Surname";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2lastName);
             // 
             // textBox4
             // 
@@ -174,6 +177,7 @@
             this.textBox4.Size = new System.Drawing.Size(350, 47);
             this.textBox4.TabIndex = 10;
             this.textBox4.Text = "Name";
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4firstName);
             // 
             // textBox5
             // 
@@ -185,16 +189,18 @@
             this.textBox5.Size = new System.Drawing.Size(706, 47);
             this.textBox5.TabIndex = 8;
             this.textBox5.Text = "Email";
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5Email);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(276, 462);
+            this.button1.Location = new System.Drawing.Point(276, 509);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(267, 65);
             this.button1.TabIndex = 4;
             this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1signUp_Click);
             // 
             // button7
             // 
@@ -208,6 +214,17 @@
             this.button7.Text = "Return ";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // textBox3DOB
+            // 
+            this.textBox3DOB.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3DOB.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox3DOB.Location = new System.Drawing.Point(233, 453);
+            this.textBox3DOB.MinimumSize = new System.Drawing.Size(350, 50);
+            this.textBox3DOB.Name = "textBox3DOB";
+            this.textBox3DOB.Size = new System.Drawing.Size(350, 50);
+            this.textBox3DOB.TabIndex = 22;
+            this.textBox3DOB.Text = "DOB";
             // 
             // createAccount
             // 
@@ -244,5 +261,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox3DOB;
     }
 }
