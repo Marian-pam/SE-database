@@ -88,5 +88,12 @@ namespace draft3
         {
             // Redirect to registration form if applicable
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Welcome f2 = new Welcome();
+            f2.Show();
+            Visible = false;
+        }
     }
 }
