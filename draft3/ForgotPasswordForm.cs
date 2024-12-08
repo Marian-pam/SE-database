@@ -8,7 +8,7 @@ namespace draft3
 {
     public partial class ForgotPassword : Form
     {
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Safwan\source\repos\SE-database\draft3bang\draft3\togetherCulture.mdf;Integrated Security=True";
 
         public ForgotPassword()
         {
