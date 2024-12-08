@@ -147,12 +147,34 @@ namespace draft3
             string email = EmailAddressTxt.Text;
             string membershipType = membershipSelect.SelectedItem?.ToString() ?? "None";
             string total = totalPrice.Text;
+            string cardNumber = cardNumTxt.Text;
+            string cvv = cvvTxt.Text;
+            string cardHolderName = cardNameTxt.Text;
 
             if (string.IsNullOrEmpty(membershipType) || membershipType == "None")
             {
                 MessageBox.Show("Please select a membership. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (string.IsNullOrEmpty(cardNumber))
+            {
+                MessageBox.Show("Card number invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty (cvv))
+            {
+                MessageBox.Show("CVV invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (string.IsNullOrEmpty(cardHolderName))
+            {
+                MessageBox.Show("Please enter the cardholder name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            UserSettings userSettingsForm = new UserSettings();
+            userSettingsForm.Show();
+
+            this.Hide();
         }
 
         private void linkLabelPAY_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -210,6 +232,11 @@ namespace draft3
                 cardNumTxt.Text = cardNumTxt.Text.Substring(0, 16);
                 cardNumTxt.SelectionStart = cardNumTxt.Text.Length;
             }
+        }
+
+        private void payNow_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

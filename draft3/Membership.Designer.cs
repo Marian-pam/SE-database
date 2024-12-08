@@ -298,6 +298,7 @@
             this.payNow.TabIndex = 35;
             this.payNow.Text = "Pay Now";
             this.payNow.UseVisualStyleBackColor = false;
+            this.payNow.TextChanged += new System.EventHandler(this.payNow_TextChanged);
             this.payNow.Click += new System.EventHandler(this.payNow_Click_1);
             // 
             // label1
