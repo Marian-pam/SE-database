@@ -164,7 +164,9 @@ namespace draft3
 
         private void returnPayment_Click(object sender, EventArgs e)
         {
-
+            Welcome f2 = new Welcome();
+            f2.Show();
+            Visible = false;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
