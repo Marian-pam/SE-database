@@ -164,12 +164,31 @@ namespace draft3
 
         private void returnPayment_Click(object sender, EventArgs e)
         {
-                
+            Welcome f2 = new Welcome();
+            f2.Show();
+            Visible = false;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void cvvTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void cvvTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (cvvTxt.Text.Length > 3)
+            {
+                cvvTxt.Text = cvvTxt.Text.Substring(0, 3);
+                cvvTxt.SelectionStart = cvvTxt.Text.Length;
+            }
+        }
+
     }
 }

@@ -56,6 +56,11 @@ namespace draft3
             f2.Show();
             Visible = false;
         }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+            //does this work
+        }
     }
     
 }
