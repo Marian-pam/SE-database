@@ -40,5 +40,17 @@ namespace draft3
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Payment f2 = new Payment();
+            f2.Show();
+            Visible = false;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

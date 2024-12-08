@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Events));
             this.togetherCultureDataSet = new draft3.togetherCultureDataSet();
             this.eventsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventsTableAdapter = new draft3.togetherCultureDataSetTableAdapters.EventsTableAdapter();
@@ -36,6 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ToggleSortButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.togetherCultureDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventsBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,7 +61,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(189, 73);
+            this.listBox1.Location = new System.Drawing.Point(189, 129);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(433, 147);
             this.listBox1.TabIndex = 1;
@@ -92,7 +94,7 @@
             // 
             // ToggleSortButton
             // 
-            this.ToggleSortButton.Location = new System.Drawing.Point(628, 73);
+            this.ToggleSortButton.Location = new System.Drawing.Point(628, 129);
             this.ToggleSortButton.Name = "ToggleSortButton";
             this.ToggleSortButton.Size = new System.Drawing.Size(88, 23);
             this.ToggleSortButton.TabIndex = 3;
@@ -100,11 +102,22 @@
             this.ToggleSortButton.UseVisualStyleBackColor = true;
             this.ToggleSortButton.Click += new System.EventHandler(this.ToggleSortButton_Click_1);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(251, 13);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(527, 87);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 467);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ToggleSortButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBox1);
@@ -116,6 +129,7 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -127,5 +141,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ToggleSortButton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

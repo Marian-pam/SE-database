@@ -12,6 +12,7 @@ namespace draft3
 {
     public partial class Payment : Form
     {
+
         public Payment()
         {
             InitializeComponent();
@@ -26,7 +27,8 @@ namespace draft3
         {
             string fullName = FullNameTxt.Text;
             string email = EmailAddressTxt.Text;
-            string membershipType = MembershipTypeTxt.Text;
+            string membershipType = membershipSelect.SelectedItem?.ToString() ?? "None";
+
 
         }
 
@@ -131,11 +133,11 @@ namespace draft3
 
             if (selectedMembership == "Community")
             {
-                txtTotal.Text = "£18.50";
+                totalPrice.Text = "£18.50";
             }
             else if (selectedMembership == "Workspace")
             {
-                txtTotal.Text = "£70.00";
+                totalPrice.Text = "£70.00";
             }
         }
 
@@ -151,11 +153,23 @@ namespace draft3
             string membershipType = membershipSelect.SelectedItem?.ToString() ?? "None";
             string total = totalPrice.Text;
 
-            if (string.IsNullOrEmpty(membershipType)) || membershipType == "None")
+            if (string.IsNullOrEmpty(membershipType) || membershipType == "None")
             {
                 MessageBox.Show("Please select a membership. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+        }
+
+        private void linkLabelPAY_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Welcome f2 = new Welcome();
+            f2.Show();
+            Visible = false;
+        }
+
+        private void returnPayment_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

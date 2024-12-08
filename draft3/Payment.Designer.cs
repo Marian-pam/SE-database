@@ -368,6 +368,7 @@
             this.returnPayment.TabIndex = 41;
             this.returnPayment.Text = "Return";
             this.returnPayment.UseVisualStyleBackColor = false;
+            this.returnPayment.Click += new System.EventHandler(this.returnPayment_Click);
             // 
             // FullNameTxt
             // 
@@ -417,6 +418,7 @@
             this.linkLabelPAY.TabIndex = 47;
             this.linkLabelPAY.TabStop = true;
             this.linkLabelPAY.Text = "Return";
+            this.linkLabelPAY.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelPAY_LinkClicked);
             // 
             // membershipSelect
             // 
