@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace draft3
 {
@@ -35,16 +36,12 @@ namespace draft3
         private void button2_Click(object sender, EventArgs e)
         {
             ForgotPassword forgotPasswordForm = new ForgotPassword();
-
             forgotPasswordForm.Show();
-
             this.Hide();
         }
         private void button6_Click(object sender, EventArgs e)
         {
             AdminDashboard events = new AdminDashboard();
-         
-
             this.Hide();
             events.Show();
         }

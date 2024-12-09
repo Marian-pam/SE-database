@@ -184,10 +184,9 @@ namespace draft3
                 return;
             }
 
-            AdminDashboard adminDashboardForm = new AdminDashboard();
+
+            AdminDashboard adminDashboardForm = new AdminDashboard(fullName, email, membershipType);
             adminDashboardForm.Show();
-
-
             this.Hide();
         }
 
