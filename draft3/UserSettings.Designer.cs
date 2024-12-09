@@ -221,6 +221,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Profile";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -292,5 +293,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox emailAddressTxt;
+        private System.Windows.Forms.TextBox fullNameTxt;
+        private System.Windows.Forms.TextBox membershipProfileTxt;
+
+
+
     }
 }
