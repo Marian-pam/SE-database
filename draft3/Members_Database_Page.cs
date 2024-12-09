@@ -82,13 +82,73 @@ namespace draft3
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Handle selection change in the ListBox if needed
+            // Get the selected member details
             string selectedMember = listBox1.SelectedItem?.ToString();
+
             if (!string.IsNullOrEmpty(selectedMember))
             {
-                MessageBox.Show($"You selected: {selectedMember}", "Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    // Extract the first name and surname from the selected list item
+                    string[] memberParts = selectedMember.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    if (memberParts.Length >= 2) // Ensure we have both first name and surname
+                    {
+                        string firstName = memberParts[0];
+                        string surname = memberParts[1].Split('-')[0].Trim(); // Extract surname before the " - " delimiter
+
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
+                            string query = "SELECT [Join Date], [Expiry Date] FROM [Founding Members] WHERE [First Name] = @FirstName AND [Surname] = @Surname";
+
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@FirstName", firstName);
+                                command.Parameters.AddWithValue("@Surname", surname);
+
+                                using (SqlDataReader reader = command.ExecuteReader())
+                                {
+                                    if (reader.Read())
+                                    {
+                                        // Fetch Join Date and Expiry Date
+                                        string joinDate = reader["Join Date"] != DBNull.Value ? Convert.ToDateTime(reader["Join Date"]).ToShortDateString() : "N/A";
+                                        string expiryDate = reader["Expiry Date"] != DBNull.Value ? Convert.ToDateTime(reader["Expiry Date"]).ToShortDateString() : "N/A";
+
+                                        MessageBox.Show($"Join Date: {joinDate}\nExpiry Date: {expiryDate}",
+                                            "Member Details",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Information);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("No details found for the selected member.",
+                                            "Information",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Information);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unable to parse the selected member's details.",
+                            "Error",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
+
 
 
         private void button7_Click(object sender, EventArgs e)
