@@ -199,7 +199,7 @@ namespace draft3
 
         private void returnPayment_Click(object sender, EventArgs e)
         {
-            Welcome f2 = new Welcome();
+            AdminDashboard f2 = new AdminDashboard();
             f2.Show();
             Visible = false;
         }
