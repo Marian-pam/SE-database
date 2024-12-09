@@ -43,6 +43,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FullNameProfileTxt = new System.Windows.Forms.TextBox();
+            this.memberProfileTxt = new System.Windows.Forms.TextBox();
+            this.EmailProfileTxt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -261,11 +264,51 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // FullNameProfileTxt
+            // 
+            this.FullNameProfileTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullNameProfileTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.FullNameProfileTxt.Location = new System.Drawing.Point(657, 247);
+            this.FullNameProfileTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.FullNameProfileTxt.MinimumSize = new System.Drawing.Size(235, 50);
+            this.FullNameProfileTxt.Name = "FullNameProfileTxt";
+            this.FullNameProfileTxt.Size = new System.Drawing.Size(448, 34);
+            this.FullNameProfileTxt.TabIndex = 11;
+            this.FullNameProfileTxt.Text = "Full Name";
+            // 
+            // memberProfileTxt
+            // 
+            this.memberProfileTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memberProfileTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.memberProfileTxt.Location = new System.Drawing.Point(657, 313);
+            this.memberProfileTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.memberProfileTxt.MinimumSize = new System.Drawing.Size(235, 50);
+            this.memberProfileTxt.Name = "memberProfileTxt";
+            this.memberProfileTxt.Size = new System.Drawing.Size(448, 34);
+            this.memberProfileTxt.TabIndex = 12;
+            this.memberProfileTxt.Text = "Membership";
+            this.memberProfileTxt.TextChanged += new System.EventHandler(this.memberProfileTxt_TextChanged);
+            // 
+            // EmailProfileTxt
+            // 
+            this.EmailProfileTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailProfileTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.EmailProfileTxt.Location = new System.Drawing.Point(657, 387);
+            this.EmailProfileTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.EmailProfileTxt.MinimumSize = new System.Drawing.Size(235, 50);
+            this.EmailProfileTxt.Name = "EmailProfileTxt";
+            this.EmailProfileTxt.Size = new System.Drawing.Size(448, 34);
+            this.EmailProfileTxt.TabIndex = 13;
+            this.EmailProfileTxt.Text = "Email";
+            // 
             // UserSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1468, 755);
+            this.Controls.Add(this.EmailProfileTxt);
+            this.Controls.Add(this.memberProfileTxt);
+            this.Controls.Add(this.FullNameProfileTxt);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UserSettings";
@@ -275,6 +318,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -294,11 +338,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox emailAddressTxt;
-        private System.Windows.Forms.TextBox fullNameTxt;
-        private System.Windows.Forms.TextBox membershipProfileTxt;
-
-
-
+        
+        
+      
+        private System.Windows.Forms.TextBox FullNameProfileTxt;
+        
+        private System.Windows.Forms.TextBox memberProfileTxt;
+        private System.Windows.Forms.TextBox EmailProfileTxt;
     }
 }

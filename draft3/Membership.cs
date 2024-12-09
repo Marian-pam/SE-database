@@ -185,9 +185,11 @@ namespace draft3
             }
 
             UserSettings userSettingsForm = new UserSettings();
-            userSettingsForm.SetMembershipType(membershipType);
+
             userSettingsForm.SetFullName(fullName);
             userSettingsForm.SetEmailAddress(email);
+            userSettingsForm.SetMembershipType(membershipType);
+
             userSettingsForm.Show();
 
             this.Hide();
