@@ -186,6 +186,8 @@ namespace draft3
 
             UserSettings userSettingsForm = new UserSettings();
             userSettingsForm.SetMembershipType(membershipType);
+            userSettingsForm.SetFullName(fullName);
+            userSettingsForm.SetEmailAddress(email);
             userSettingsForm.Show();
 
             this.Hide();
@@ -249,6 +251,11 @@ namespace draft3
         }
 
         private void payNow_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FullNameTxt_TextChanged(object sender, EventArgs e)
         {
 
         }

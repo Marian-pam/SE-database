@@ -45,9 +45,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fullNameTxt = new System.Windows.Forms.TextBox();
+            this.emailAddressTxt = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.membershipProfileTxt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -288,51 +287,41 @@
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
-            // textBox6
+            // fullNameTxt
             // 
-            this.textBox6.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox6.Location = new System.Drawing.Point(762, 282);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.MinimumSize = new System.Drawing.Size(235, 50);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(235, 34);
-            this.textBox6.TabIndex = 14;
-            this.textBox6.Text = "First Name";
+            this.fullNameTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fullNameTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.fullNameTxt.Location = new System.Drawing.Point(697, 276);
+            this.fullNameTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.fullNameTxt.MinimumSize = new System.Drawing.Size(235, 50);
+            this.fullNameTxt.Name = "fullNameTxt";
+            this.fullNameTxt.Size = new System.Drawing.Size(371, 50);
+            this.fullNameTxt.TabIndex = 14;
+            this.fullNameTxt.Text = "Full Name ";
+            this.fullNameTxt.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // textBox1
+            // emailAddressTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(762, 356);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.MinimumSize = new System.Drawing.Size(235, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 34);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "Last Name";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox2.Location = new System.Drawing.Point(762, 429);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.MinimumSize = new System.Drawing.Size(235, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(235, 34);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.Text = "Email Address";
+            this.emailAddressTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailAddressTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.emailAddressTxt.Location = new System.Drawing.Point(697, 363);
+            this.emailAddressTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.emailAddressTxt.MinimumSize = new System.Drawing.Size(235, 50);
+            this.emailAddressTxt.Name = "emailAddressTxt";
+            this.emailAddressTxt.Size = new System.Drawing.Size(371, 50);
+            this.emailAddressTxt.TabIndex = 16;
+            this.emailAddressTxt.Text = "Email Address";
+            this.emailAddressTxt.TextChanged += new System.EventHandler(this.emailAddressTxt_TextChanged);
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox3.Location = new System.Drawing.Point(762, 506);
+            this.textBox3.Location = new System.Drawing.Point(762, 446);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.MinimumSize = new System.Drawing.Size(235, 50);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(235, 34);
+            this.textBox3.Size = new System.Drawing.Size(235, 50);
             this.textBox3.TabIndex = 17;
             this.textBox3.Text = "Age";
             // 
@@ -340,11 +329,11 @@
             // 
             this.membershipProfileTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.membershipProfileTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.membershipProfileTxt.Location = new System.Drawing.Point(762, 586);
+            this.membershipProfileTxt.Location = new System.Drawing.Point(697, 528);
             this.membershipProfileTxt.Margin = new System.Windows.Forms.Padding(2);
             this.membershipProfileTxt.MinimumSize = new System.Drawing.Size(235, 50);
             this.membershipProfileTxt.Name = "membershipProfileTxt";
-            this.membershipProfileTxt.Size = new System.Drawing.Size(235, 34);
+            this.membershipProfileTxt.Size = new System.Drawing.Size(371, 50);
             this.membershipProfileTxt.TabIndex = 18;
             this.membershipProfileTxt.Text = "Membership";
             this.membershipProfileTxt.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -357,9 +346,8 @@
             this.ClientSize = new System.Drawing.Size(1468, 755);
             this.Controls.Add(this.membershipProfileTxt);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.emailAddressTxt);
+            this.Controls.Add(this.fullNameTxt);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -395,9 +383,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox fullNameTxt;
+        private System.Windows.Forms.TextBox emailAddressTxt;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox membershipProfileTxt;
     }

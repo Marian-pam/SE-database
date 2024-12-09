@@ -386,6 +386,7 @@
             this.FullNameTxt.Name = "FullNameTxt";
             this.FullNameTxt.Size = new System.Drawing.Size(202, 20);
             this.FullNameTxt.TabIndex = 42;
+            this.FullNameTxt.TextChanged += new System.EventHandler(this.FullNameTxt_TextChanged);
             // 
             // EmailAddressTxt
             // 
