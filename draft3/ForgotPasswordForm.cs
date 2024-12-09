@@ -14,17 +14,17 @@ namespace draft3
         {
             InitializeComponent();
         }
-        
+
         private void ForgotPassword_Load(object sender, EventArgs e)
         {
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-        
+
         private void EnterEmail_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             // maybe put input rejection in this 
@@ -131,3 +131,4 @@ namespace draft3
         }
     }
 }
+

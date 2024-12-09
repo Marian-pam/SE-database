@@ -16,5 +16,41 @@ namespace draft3
         {
             InitializeComponent();
         }
+        public void SetMembershipType(string membershipType)
+        {
+            membershipProfileTxt.Text = $"Membership - {membershipType}";
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        { }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgotPasswordForm = new ForgotPassword();
+
+            forgotPasswordForm.Show();
+
+            this.Hide();
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+        }
+        public void SetFullName(string fullName)
+        {
+            fullNameTxt.Text = $"Full Name - {fullName}";
+        }
+        private void fullNameTxt_TextChanged(object sender, EventArgs e)
+        { }
+        public void SetEmailAddress(string emailAddress)
+        {
+            emailAddressTxt.Text = $"Email - {emailAddress}";
+        }
+
+        private void emailAddressTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

@@ -59,7 +59,7 @@ namespace draft3
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Month_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,12 +147,50 @@ namespace draft3
             string email = EmailAddressTxt.Text;
             string membershipType = membershipSelect.SelectedItem?.ToString() ?? "None";
             string total = totalPrice.Text;
+            string cardNumber = cardNumTxt.Text;
+            string cvv = cvvTxt.Text;
+            string cardHolderName = cardNameTxt.Text;
+            string selectedMonth = monthSelect.SelectedItem?.ToString();
+            string selectedYear = yearSelect.SelectedItem?.ToString();
 
             if (string.IsNullOrEmpty(membershipType) || membershipType == "None")
             {
                 MessageBox.Show("Please select a membership. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (string.IsNullOrEmpty(cardNumber))
+            {
+                MessageBox.Show("Card number invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty (cvv))
+            {
+                MessageBox.Show("CVV invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (string.IsNullOrEmpty(cardHolderName))
+            {
+                MessageBox.Show("Please enter the cardholder name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(selectedMonth))
+            {
+                MessageBox.Show("Please select a month.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(selectedYear))
+            {
+                MessageBox.Show("Please select a year.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            UserSettings userSettingsForm = new UserSettings();
+            userSettingsForm.SetMembershipType(membershipType);
+            userSettingsForm.SetFullName(fullName);
+            userSettingsForm.SetEmailAddress(email);
+            userSettingsForm.Show();
+
+            this.Hide();
         }
 
         private void linkLabelPAY_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -170,6 +208,54 @@ namespace draft3
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cvvTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void cvvTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (cvvTxt.Text.Length > 3)
+            {
+                cvvTxt.Text = cvvTxt.Text.Substring(0, 3);
+                cvvTxt.SelectionStart = cvvTxt.Text.Length;
+            }
+        }
+
+        private void textBox3_TextChange(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void cardNumTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cardNumTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (cardNumTxt.Text.Length > 16)
+            {
+                cardNumTxt.Text = cardNumTxt.Text.Substring(0, 16);
+                cardNumTxt.SelectionStart = cardNumTxt.Text.Length;
+            }
+        }
+
+        private void payNow_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FullNameTxt_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -67,7 +67,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(444, 432);
@@ -77,7 +77,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox2.Image = global::draft3.Properties.Resources.TC_Logos_011;
             this.pictureBox2.Location = new System.Drawing.Point(23, 20);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
@@ -90,7 +90,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.label2.BackColor = System.Drawing.Color.Maroon;
             this.label2.Font = new System.Drawing.Font("Impact", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(155, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -103,7 +103,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.label3.BackColor = System.Drawing.Color.Maroon;
             this.label3.Location = new System.Drawing.Point(158, 54);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -118,6 +118,8 @@
             this.cardNumTxt.Name = "cardNumTxt";
             this.cardNumTxt.Size = new System.Drawing.Size(202, 20);
             this.cardNumTxt.TabIndex = 20;
+            this.cardNumTxt.TextChanged += new System.EventHandler(this.cardNumTxt_TextChanged);
+            this.cardNumTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cardNumTxt_KeyPress);
             // 
             // label4
             // 
@@ -139,6 +141,8 @@
             this.cvvTxt.Name = "cvvTxt";
             this.cvvTxt.Size = new System.Drawing.Size(52, 20);
             this.cvvTxt.TabIndex = 23;
+            this.cvvTxt.TextChanged += new System.EventHandler(this.cvvTxt_TextChanged);
+            this.cvvTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cvvTxt_KeyPress);
             // 
             // label5
             // 
@@ -161,6 +165,7 @@
             this.cardNameTxt.Size = new System.Drawing.Size(202, 20);
             this.cardNameTxt.TabIndex = 25;
             this.cardNameTxt.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.cardNameTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_TextChange);
             // 
             // label6
             // 
@@ -285,7 +290,7 @@
             // 
             // payNow
             // 
-            this.payNow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.payNow.BackColor = System.Drawing.Color.Maroon;
             this.payNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.payNow.Location = new System.Drawing.Point(595, 297);
             this.payNow.Name = "payNow";
@@ -293,12 +298,13 @@
             this.payNow.TabIndex = 35;
             this.payNow.Text = "Pay Now";
             this.payNow.UseVisualStyleBackColor = false;
+            this.payNow.TextChanged += new System.EventHandler(this.payNow_TextChanged);
             this.payNow.Click += new System.EventHandler(this.payNow_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.label1.BackColor = System.Drawing.Color.Maroon;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(43, 137);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -311,7 +317,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.label8.BackColor = System.Drawing.Color.Maroon;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(43, 297);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -324,7 +330,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.label9.BackColor = System.Drawing.Color.Maroon;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(43, 189);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -337,7 +343,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.label10.BackColor = System.Drawing.Color.Maroon;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(43, 324);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -361,7 +367,7 @@
             // 
             // returnPayment
             // 
-            this.returnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.returnPayment.BackColor = System.Drawing.Color.Maroon;
             this.returnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.returnPayment.Location = new System.Drawing.Point(779, 397);
             this.returnPayment.Name = "returnPayment";
@@ -369,7 +375,9 @@
             this.returnPayment.TabIndex = 41;
             this.returnPayment.Text = "Return";
             this.returnPayment.UseVisualStyleBackColor = false;
+            this.returnPayment.TextChanged += new System.EventHandler(this.cvvTxt_TextChanged);
             this.returnPayment.Click += new System.EventHandler(this.returnPayment_Click);
+            this.returnPayment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cvvTxt_TextChanged);
             // 
             // FullNameTxt
             // 
@@ -378,6 +386,7 @@
             this.FullNameTxt.Name = "FullNameTxt";
             this.FullNameTxt.Size = new System.Drawing.Size(202, 20);
             this.FullNameTxt.TabIndex = 42;
+            this.FullNameTxt.TextChanged += new System.EventHandler(this.FullNameTxt_TextChanged);
             // 
             // EmailAddressTxt
             // 
@@ -400,7 +409,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(216)))));
+            this.label12.BackColor = System.Drawing.Color.Maroon;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(49, 226);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -434,7 +443,7 @@
             this.membershipSelect.Text = "Membership Type";
             this.membershipSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // Payment
+            // Membership
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -470,7 +479,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
-            this.Name = "Payment";
+            this.Name = "Membership";
             this.Text = "Payment";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
