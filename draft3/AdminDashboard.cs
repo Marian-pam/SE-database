@@ -27,6 +27,9 @@ namespace draft3
         private void button2_Click(object sender, EventArgs e) // Placeholder (Events Database)
         {
             // Functionality not implemented
+            Members_Database_Page f2 = new Members_Database_Page();
+            f2.Show();
+            Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e) // Analytics button
