@@ -184,13 +184,9 @@ namespace draft3
                 return;
             }
 
-            UserSettings userSettingsForm = new UserSettings();
+            AdminDashboard adminDashboardForm = new AdminDashboard();
+            adminDashboardForm.Show();
 
-            userSettingsForm.SetFullName(fullName);
-            userSettingsForm.SetEmailAddress(email);
-            userSettingsForm.SetMembershipType(membershipType);
-
-            userSettingsForm.Show();
 
             this.Hide();
         }
