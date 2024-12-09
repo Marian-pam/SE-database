@@ -46,9 +46,11 @@
             this.FullNameProfileTxt = new System.Windows.Forms.TextBox();
             this.memberProfileTxt = new System.Windows.Forms.TextBox();
             this.EmailProfileTxt = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -268,11 +270,11 @@
             // 
             this.FullNameProfileTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FullNameProfileTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.FullNameProfileTxt.Location = new System.Drawing.Point(657, 247);
+            this.FullNameProfileTxt.Location = new System.Drawing.Point(667, 256);
             this.FullNameProfileTxt.Margin = new System.Windows.Forms.Padding(2);
             this.FullNameProfileTxt.MinimumSize = new System.Drawing.Size(235, 50);
             this.FullNameProfileTxt.Name = "FullNameProfileTxt";
-            this.FullNameProfileTxt.Size = new System.Drawing.Size(448, 34);
+            this.FullNameProfileTxt.Size = new System.Drawing.Size(448, 50);
             this.FullNameProfileTxt.TabIndex = 11;
             this.FullNameProfileTxt.Text = "Full Name";
             // 
@@ -280,11 +282,11 @@
             // 
             this.memberProfileTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memberProfileTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.memberProfileTxt.Location = new System.Drawing.Point(657, 313);
+            this.memberProfileTxt.Location = new System.Drawing.Point(667, 430);
             this.memberProfileTxt.Margin = new System.Windows.Forms.Padding(2);
             this.memberProfileTxt.MinimumSize = new System.Drawing.Size(235, 50);
             this.memberProfileTxt.Name = "memberProfileTxt";
-            this.memberProfileTxt.Size = new System.Drawing.Size(448, 34);
+            this.memberProfileTxt.Size = new System.Drawing.Size(448, 50);
             this.memberProfileTxt.TabIndex = 12;
             this.memberProfileTxt.Text = "Membership";
             this.memberProfileTxt.TextChanged += new System.EventHandler(this.memberProfileTxt_TextChanged);
@@ -293,19 +295,30 @@
             // 
             this.EmailProfileTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailProfileTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.EmailProfileTxt.Location = new System.Drawing.Point(657, 387);
+            this.EmailProfileTxt.Location = new System.Drawing.Point(667, 339);
             this.EmailProfileTxt.Margin = new System.Windows.Forms.Padding(2);
             this.EmailProfileTxt.MinimumSize = new System.Drawing.Size(235, 50);
             this.EmailProfileTxt.Name = "EmailProfileTxt";
-            this.EmailProfileTxt.Size = new System.Drawing.Size(448, 34);
+            this.EmailProfileTxt.Size = new System.Drawing.Size(448, 50);
             this.EmailProfileTxt.TabIndex = 13;
             this.EmailProfileTxt.Text = "Email";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(779, 49);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(166, 182);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // UserSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1468, 755);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.EmailProfileTxt);
             this.Controls.Add(this.memberProfileTxt);
             this.Controls.Add(this.FullNameProfileTxt);
@@ -313,10 +326,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "UserSettings";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.UserSettings_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,5 +360,6 @@
         
         private System.Windows.Forms.TextBox memberProfileTxt;
         private System.Windows.Forms.TextBox EmailProfileTxt;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
