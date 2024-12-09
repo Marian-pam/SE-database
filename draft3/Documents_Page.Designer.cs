@@ -154,6 +154,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Documents_Page";
             this.Text = "Documents_Page";
+            this.Load += new System.EventHandler(this.Documents_Page_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

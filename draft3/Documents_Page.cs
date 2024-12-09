@@ -24,5 +24,10 @@ namespace draft3
             this.Hide();
             events.Show();
         }
+
+        private void Documents_Page_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
