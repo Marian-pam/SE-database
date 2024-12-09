@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserSettings));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -41,11 +43,18 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.membershipProfileTxt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +77,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 755);
             this.panel1.TabIndex = 6;
+            // 
+            // button9
+            // 
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Arial", 16F);
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(15, 556);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(320, 50);
+            this.button9.TabIndex = 12;
+            this.button9.Text = "Membership";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Arial", 16F);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(15, 506);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(320, 50);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "History";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -170,9 +213,11 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Password";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Plum;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -186,7 +231,7 @@
             this.button1.Size = new System.Drawing.Size(320, 50);
             this.button1.TabIndex = 4;
             this.button1.Text = "Profile";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -225,45 +270,98 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // button8
+            // pictureBox2
             // 
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Arial", 16F);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(15, 506);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(320, 50);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "History";
-            this.button8.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = global::draft3.Properties.Resources.a_login_icon_;
+            this.pictureBox2.Location = new System.Drawing.Point(737, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(0, 0);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
-            // button9
+            // pictureBox3
             // 
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Arial", 16F);
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(15, 556);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(320, 50);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "Membership";
-            this.button9.UseVisualStyleBackColor = true;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(775, 69);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(165, 171);
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox6.Location = new System.Drawing.Point(762, 282);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.MinimumSize = new System.Drawing.Size(235, 50);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(235, 34);
+            this.textBox6.TabIndex = 14;
+            this.textBox6.Text = "First Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.Location = new System.Drawing.Point(762, 356);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.MinimumSize = new System.Drawing.Size(235, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(235, 34);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.Text = "Last Name";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox2.Location = new System.Drawing.Point(762, 429);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.MinimumSize = new System.Drawing.Size(235, 50);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(235, 34);
+            this.textBox2.TabIndex = 16;
+            this.textBox2.Text = "Email Address";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox3.Location = new System.Drawing.Point(762, 506);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.MinimumSize = new System.Drawing.Size(235, 50);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(235, 34);
+            this.textBox3.TabIndex = 17;
+            this.textBox3.Text = "Age";
+            // 
+            // membershipProfileTxt
+            // 
+            this.membershipProfileTxt.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.membershipProfileTxt.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.membershipProfileTxt.Location = new System.Drawing.Point(762, 586);
+            this.membershipProfileTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.membershipProfileTxt.MinimumSize = new System.Drawing.Size(235, 50);
+            this.membershipProfileTxt.Name = "membershipProfileTxt";
+            this.membershipProfileTxt.Size = new System.Drawing.Size(235, 34);
+            this.membershipProfileTxt.TabIndex = 18;
+            this.membershipProfileTxt.Text = "Membership";
+            this.membershipProfileTxt.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // UserSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1468, 755);
+            this.Controls.Add(this.membershipProfileTxt);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserSettings";
@@ -272,7 +370,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -292,5 +393,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox membershipProfileTxt;
     }
 }

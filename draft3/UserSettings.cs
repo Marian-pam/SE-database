@@ -16,5 +16,22 @@ namespace draft3
         {
             InitializeComponent();
         }
+        public void SetMembershipType(string membershipType)
+        {
+            membershipProfileTxt.Text = $"Membership - {membershipType}";
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        { }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgotPasswordForm = new ForgotPassword();
+
+            forgotPasswordForm.Show();
+
+            this.Hide();
+        }
     }
+
 }

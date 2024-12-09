@@ -183,7 +183,9 @@ namespace draft3
                 MessageBox.Show("Please select a year.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             UserSettings userSettingsForm = new UserSettings();
+            userSettingsForm.SetMembershipType(membershipType);
             userSettingsForm.Show();
 
             this.Hide();
