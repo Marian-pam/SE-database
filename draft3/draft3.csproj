@@ -120,6 +120,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalyticsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalyticsPage.Designer.cs">
+      <DependentUpon>AnalyticsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatsPage.Designer.cs">
+      <DependentUpon>ChatsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="createAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +139,18 @@
       <DependentUpon>createAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="Digital_Content_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Digital_Content_Page.Designer.cs">
+      <DependentUpon>Digital_Content_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents_Page.Designer.cs">
+      <DependentUpon>Documents_Page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Events.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +168,18 @@
     </Compile>
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interests_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interests_Page.Designer.cs">
+      <DependentUpon>Interests_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members_Database_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Members_Database_Page.Designer.cs">
+      <DependentUpon>Members_Database_Page.cs</DependentUpon>
     </Compile>
     <Compile Include="UserSettings.cs">
       <SubType>Form</SubType>
@@ -179,8 +215,20 @@
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AnalyticsPage.resx">
+      <DependentUpon>AnalyticsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatsPage.resx">
+      <DependentUpon>ChatsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="createAccount.resx">
       <DependentUpon>createAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Digital_Content_Page.resx">
+      <DependentUpon>Digital_Content_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents_Page.resx">
+      <DependentUpon>Documents_Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Events.resx">
       <DependentUpon>Events.cs</DependentUpon>
@@ -188,8 +236,14 @@
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interests_Page.resx">
+      <DependentUpon>Interests_Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Membership.resx">
       <DependentUpon>Membership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Members_Database_Page.resx">
+      <DependentUpon>Members_Database_Page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSettings.resx">
       <DependentUpon>UserSettings.cs</DependentUpon>
