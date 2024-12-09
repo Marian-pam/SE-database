@@ -134,8 +134,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(320, 50);
             this.button6.TabIndex = 9;
-            this.button6.Text = "Exit";
+            this.button6.Text = "Return";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 

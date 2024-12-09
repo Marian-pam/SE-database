@@ -56,6 +56,13 @@ namespace draft3
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AdminDashboard events = new AdminDashboard();
+            this.Hide();
+            events.Show();
+        }
     }
 
 }
