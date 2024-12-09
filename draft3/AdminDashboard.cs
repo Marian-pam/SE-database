@@ -27,6 +27,7 @@ namespace draft3
 
         public AdminDashboard()
         {
+            InitializeComponent();
         }
 
         private void AdminDashboard_Load(object sender, EventArgs e) // When the dashboard loads
@@ -124,8 +125,6 @@ namespace draft3
             f2.Show();
             Visible = false;
         }
-
-        
 
         
 
