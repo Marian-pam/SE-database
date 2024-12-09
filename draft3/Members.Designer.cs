@@ -127,7 +127,7 @@
             this.Controls.Add(this.button7);
             this.Name = "Members_Database_Page";
             this.Text = "Members_Database_Page";
-            this.Load += new System.EventHandler(this.Members_Database_Page_Load_1);
+            this.Load += new System.EventHandler(this.Members_Database_Page_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

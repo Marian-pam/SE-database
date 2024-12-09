@@ -7,23 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient; // Add this for SQL Server operations
+using System.Data.SqlClient; // Required for interacting with the SQL Server database
 
 namespace draft3
 {
     public partial class Members : Form
     {
-        private bool isAlphabetical = false; // Flag to track sorting order
+        // This flag determines whether the member list is sorted alphabetically
+        private bool isAlphabetical = false;
+
+        // Connection string for the database (adjust as needed for your setup)
         private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True";
 
         public Members()
         {
-            InitializeComponent();
-            LoadData(); // Load data into the ListBox when the form is opened
+            InitializeComponent(); // Sets up the form and its controls
+            LoadData(); // Load and display member data when the form opens
         }
 
         /// <summary>
-        /// Fetches data from the database and populates the ListBox.
+        /// Fetches member data from the database and displays it in the ListBox.
         /// </summary>
         private void LoadData()
         {
@@ -31,7 +34,9 @@ namespace draft3
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    connection.Open();
+                    connection.Open(); // Open a connection to the database
+
+                    // SQL query to fetch member details
                     string query = "SELECT [First Name], [Surname], [Membership Status] FROM [Founding Members]";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -40,11 +45,12 @@ namespace draft3
                             List<string> data = new List<string>();
                             while (reader.Read())
                             {
+                                // Combine first name, surname, and membership status into a single string
                                 string item = $"{reader["First Name"]} {reader["Surname"]} - {reader["Membership Status"]}";
                                 data.Add(item);
                             }
 
-                            // Apply sorting if the alphabetical flag is true
+                            // Sort the data alphabetically if the flag is set
                             if (isAlphabetical)
                             {
                                 data = data.OrderBy(item => item).ToList();
@@ -53,13 +59,13 @@ namespace draft3
                             // Clear the ListBox to avoid duplicate entries
                             listBox1.Items.Clear();
 
-                            // Populate the ListBox with data from the table
+                            // Add the retrieved data to the ListBox
                             foreach (string item in data)
                             {
                                 listBox1.Items.Add(item);
                             }
 
-                            // Notify if no data was found in the table
+                            // Notify the user if no members were found
                             if (data.Count == 0)
                             {
                                 MessageBox.Show("No members found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -70,36 +76,37 @@ namespace draft3
             }
             catch (Exception ex)
             {
-                // Display any errors that occur during the data retrieval
+                // Show an error message if data retrieval fails
                 MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Members_Database_Page_Load(object sender, EventArgs e)
         {
-            // Optional: Add any initialization code here
+            // Event triggered when the form loads. Add any necessary initialization here.
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Get the selected member details
+            // Handle the event when the user selects a member from the ListBox
             string selectedMember = listBox1.SelectedItem?.ToString();
 
             if (!string.IsNullOrEmpty(selectedMember))
             {
                 try
                 {
-                    // Extract the first name and surname from the selected list item
+                    // Split the selected item to extract the first name and surname
                     string[] memberParts = selectedMember.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-                    if (memberParts.Length >= 2) // Ensure we have both first name and surname
+                    if (memberParts.Length >= 2) // Ensure valid selection
                     {
                         string firstName = memberParts[0];
-                        string surname = memberParts[1].Split('-')[0].Trim(); // Extract surname before the " - " delimiter
+                        string surname = memberParts[1].Split('-')[0].Trim(); // Get the surname before the delimiter
 
                         using (SqlConnection connection = new SqlConnection(connectionString))
                         {
                             connection.Open();
+                            // Query to get additional details for the selected member
                             string query = "SELECT [Join Date], [Expiry Date] FROM [Founding Members] WHERE [First Name] = @FirstName AND [Surname] = @Surname";
 
                             using (SqlCommand command = new SqlCommand(query, connection))
@@ -111,10 +118,11 @@ namespace draft3
                                 {
                                     if (reader.Read())
                                     {
-                                        // Fetch Join Date and Expiry Date
+                                        // Format join and expiry dates
                                         string joinDate = reader["Join Date"] != DBNull.Value ? Convert.ToDateTime(reader["Join Date"]).ToShortDateString() : "N/A";
                                         string expiryDate = reader["Expiry Date"] != DBNull.Value ? Convert.ToDateTime(reader["Expiry Date"]).ToShortDateString() : "N/A";
 
+                                        // Show member details in a message box
                                         MessageBox.Show($"Join Date: {joinDate}\nExpiry Date: {expiryDate}",
                                             "Member Details",
                                             MessageBoxButtons.OK,
@@ -149,24 +157,21 @@ namespace draft3
             }
         }
 
-
-
         private void button7_Click(object sender, EventArgs e)
         {
+            // Open the Admin Dashboard form
             AdminDashboard f2 = new AdminDashboard();
             f2.Show();
-            Visible = false;
+            Visible = false; // Hide the Members form
         }
 
         private void ToggleSortButton_Click_1(object sender, EventArgs e)
         {
-            // Toggle the sorting order flag
+            // Toggle the sorting order and reload data
             isAlphabetical = !isAlphabetical;
-
-            // Reload the data with the new sorting order
             LoadData();
 
-            // Update the button text to indicate the current state
+            // Update the button text to reflect the current sort order
             Button button = sender as Button;
             if (button != null)
             {
@@ -174,21 +179,15 @@ namespace draft3
             }
         }
 
-        private void Members_Database_Page_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            // Add a new member by prompting the user for details
             try
             {
-                // Prompt for member details
                 string firstName = Prompt.ShowDialog("Enter First Name:", "Add Member");
                 string surname = Prompt.ShowDialog("Enter Surname:", "Add Member");
                 string membershipStatus = Prompt.ShowDialog("Enter Membership Status:", "Add Member");
 
-                // Ensure all fields are filled
                 if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(surname) || string.IsNullOrWhiteSpace(membershipStatus))
                 {
                     MessageBox.Show("All fields must be filled to add a member.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -226,13 +225,12 @@ namespace draft3
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Remove a member based on user input
             try
             {
-                // Prompt for member details to delete
                 string firstName = Prompt.ShowDialog("Enter First Name of the Member to Remove:", "Remove Member");
                 string surname = Prompt.ShowDialog("Enter Surname of the Member to Remove:", "Remove Member");
 
-                // Ensure fields are filled
                 if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(surname))
                 {
                     MessageBox.Show("First Name and Surname must be provided to remove a member.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -269,6 +267,7 @@ namespace draft3
 
         public static class Prompt
         {
+            // A utility to show a dialog box and get user input
             public static string ShowDialog(string text, string caption)
             {
                 Form prompt = new Form()
@@ -291,6 +290,5 @@ namespace draft3
                 return prompt.ShowDialog() == DialogResult.OK ? inputBox.Text : string.Empty;
             }
         }
-
     }
 }
