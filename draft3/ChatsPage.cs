@@ -23,5 +23,10 @@ namespace draft3
             this.Hide();
             events.Show();
         }
+
+        private void ChatsPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

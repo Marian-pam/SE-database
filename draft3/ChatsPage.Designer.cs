@@ -36,9 +36,10 @@
             this.button7.BackColor = System.Drawing.Color.Maroon;
             this.button7.Font = new System.Drawing.Font("Arial", 16F);
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(695, 400);
+            this.button7.Location = new System.Drawing.Point(1042, 615);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(93, 38);
+            this.button7.Size = new System.Drawing.Size(140, 58);
             this.button7.TabIndex = 3;
             this.button7.Text = "Return ";
             this.button7.UseVisualStyleBackColor = false;
@@ -46,12 +47,14 @@
             // 
             // ChatsPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.button7);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ChatsPage";
             this.Text = "ChatsPage";
+            this.Load += new System.EventHandler(this.ChatsPage_Load);
             this.ResumeLayout(false);
 
         }
