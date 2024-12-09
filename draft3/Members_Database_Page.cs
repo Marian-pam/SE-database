@@ -14,7 +14,7 @@ namespace draft3
     public partial class Members_Database_Page : Form
     {
         private bool isAlphabetical = false; // Flag to track sorting order
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= |DataDirectory|\togetherCulture.mdf;Integrated Security=True"; // Update this with your actual connection string
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True"; // Update this with your actual connection string
 
         public Members_Database_Page()
         {
@@ -32,7 +32,7 @@ namespace draft3
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT [First Name], [Surname], [Membership Status] FROM [dbo.Founding_Members]";
+                    string query = "SELECT [First Name], [Surname], [Membership Status] FROM [Founding Members]";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
