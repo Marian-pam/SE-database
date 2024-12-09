@@ -14,7 +14,7 @@ namespace draft3
     public partial class Members_Database_Page : Form
     {
         private bool isAlphabetical = false; // Flag to track sorting order
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True"; // Update this with your actual connection string
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True"; 
 
         public Members_Database_Page()
         {
