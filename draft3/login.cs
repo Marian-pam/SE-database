@@ -8,7 +8,7 @@ namespace draft3
     public partial class login : Form
     {
         // Database connection string
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\maria\source\repos\SE-database\4\draft3\togetherCulture.mdf;Integrated Security=True";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True";
 
         public login()
         {
