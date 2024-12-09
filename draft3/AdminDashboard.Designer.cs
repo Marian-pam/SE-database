@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -41,10 +45,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,8 +69,79 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 780);
+            this.panel1.Size = new System.Drawing.Size(284, 661);
             this.panel1.TabIndex = 0;
+            // 
+            // button11
+            // 
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Arial", 16F);
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(15, 538);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(269, 50);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Events";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Arial", 16F);
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(15, 488);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(269, 50);
+            this.button10.TabIndex = 12;
+            this.button10.Text = "Documents";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Arial", 16F);
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(15, 438);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(269, 50);
+            this.button9.TabIndex = 11;
+            this.button9.Text = "Interests";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Arial", 16F);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(15, 388);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(269, 50);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "Digital Content";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button6
             // 
@@ -82,7 +153,7 @@
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(15, 730);
+            this.button6.Location = new System.Drawing.Point(15, 611);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(269, 50);
             this.button6.TabIndex = 9;
@@ -185,7 +256,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 144);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(15, 636);
+            this.panel3.Size = new System.Drawing.Size(15, 517);
             this.panel3.TabIndex = 2;
             // 
             // panel2
@@ -230,82 +301,11 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
-            // 
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Arial", 16F);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(15, 388);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(269, 50);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Digital Content";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Arial", 16F);
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(15, 438);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(269, 50);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "Interests";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Arial", 16F);
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(15, 488);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(269, 50);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "Documents";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Arial", 16F);
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(15, 538);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(269, 50);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Events";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 780);
+            this.ClientSize = new System.Drawing.Size(1079, 661);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
