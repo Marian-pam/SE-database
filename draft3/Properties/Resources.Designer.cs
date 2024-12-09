@@ -103,6 +103,16 @@ namespace draft3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a_maroon_sent_image_icon_SE {
+            get {
+                object obj = ResourceManager.GetObject("a maroon sent image icon SE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap a_new_version_of_the_together_culture_image_for_login {
             get {
                 object obj = ResourceManager.GetObject("a new version of the together culture image for login", resourceCulture);
