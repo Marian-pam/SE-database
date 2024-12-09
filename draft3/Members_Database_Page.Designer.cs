@@ -42,10 +42,9 @@
             this.button7.BackColor = System.Drawing.Color.Maroon;
             this.button7.Font = new System.Drawing.Font("Arial", 16F);
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(1042, 615);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button7.Location = new System.Drawing.Point(695, 400);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(140, 58);
+            this.button7.Size = new System.Drawing.Size(93, 38);
             this.button7.TabIndex = 3;
             this.button7.Text = "Return ";
             this.button7.UseVisualStyleBackColor = false;
@@ -56,9 +55,8 @@
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 728);
+            this.panel1.Size = new System.Drawing.Size(182, 473);
             this.panel1.TabIndex = 4;
             // 
             // pictureBox1
@@ -67,9 +65,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::draft3.Properties.Resources.Screenshot_2024_12_01_200551;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(234, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -77,34 +76,31 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(295, 176);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listBox1.Location = new System.Drawing.Point(197, 114);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(648, 224);
+            this.listBox1.Size = new System.Drawing.Size(433, 147);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // ToggleSortButton
             // 
-            this.ToggleSortButton.Location = new System.Drawing.Point(951, 176);
-            this.ToggleSortButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ToggleSortButton.Location = new System.Drawing.Point(634, 114);
             this.ToggleSortButton.Name = "ToggleSortButton";
-            this.ToggleSortButton.Size = new System.Drawing.Size(132, 35);
+            this.ToggleSortButton.Size = new System.Drawing.Size(88, 23);
             this.ToggleSortButton.TabIndex = 6;
             this.ToggleSortButton.Text = "Sort: Original";
             this.ToggleSortButton.UseVisualStyleBackColor = true;
+            this.ToggleSortButton.Click += new System.EventHandler(this.ToggleSortButton_Click_1);
             // 
             // Members_Database_Page
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ToggleSortButton);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Members_Database_Page";
             this.Text = "Members_Database_Page";
             this.panel1.ResumeLayout(false);

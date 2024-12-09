@@ -14,7 +14,7 @@ namespace draft3
     public partial class Members_Database_Page : Form
     {
         private bool isAlphabetical = false; // Flag to track sorting order
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True"; 
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True";
 
         public Members_Database_Page()
         {
@@ -90,7 +90,15 @@ namespace draft3
             }
         }
 
-        private void ToggleSortButton_Click(object sender, EventArgs e)
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AdminDashboard f2 = new AdminDashboard();
+            f2.Show();
+            Visible = false;
+        }
+
+        private void ToggleSortButton_Click_1(object sender, EventArgs e)
         {
             // Toggle the sorting order flag
             isAlphabetical = !isAlphabetical;
@@ -104,13 +112,6 @@ namespace draft3
             {
                 button.Text = isAlphabetical ? "Sort: Alphabetical" : "Sort: Original";
             }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            AdminDashboard f2 = new AdminDashboard();
-            f2.Show();
-            Visible = false;
         }
     }
 }
