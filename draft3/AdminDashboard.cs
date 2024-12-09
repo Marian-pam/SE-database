@@ -12,10 +12,54 @@ namespace draft3
 {
     public partial class AdminDashboard : Form
     {
-        public AdminDashboard()
+        private string _fullName;
+        private string _email;
+        private string _membershipType;
+
+        public AdminDashboard(string fullName, string email, string membershipType)
         {
             InitializeComponent();
+
+            _fullName = fullName;
+            _email = email;
+            _membershipType = membershipType;
         }
+
+        public AdminDashboard()
+        {
+        }
+
+        private void AdminDashboard_Load(object sender, EventArgs e) // When the dashboard loads
+        {
+            // Set the labels in AdminDashboard
+            fullNameLabel.Text = $"Full Name: {_fullName}";
+            emailLabel.Text = $"Email: {_email}";
+            membershipLabel.Text = $"Membership Type: {_membershipType}";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UserSettings userSettingsForm = new UserSettings();
+
+          
+            userSettingsForm.SetFullName(_fullName);
+            userSettingsForm.SetEmailAddress(_email);
+            userSettingsForm.SetMembershipType(_membershipType);
+
+          
+            userSettingsForm.Show();
+            this.Hide(); 
+        }
+
+
+        public void SetUserDetails(string fullName, string email, string membershipType)
+        {
+            _fullName = fullName;
+            _email = email;
+            _membershipType = membershipType;
+        }
+
+       
 
         private void button1_Click(object sender, EventArgs e) // Events button
         {
@@ -26,7 +70,7 @@ namespace draft3
 
         private void button2_Click(object sender, EventArgs e) // Placeholder (Events Database)
         {
-            // Functionality not implemented
+            
             Members_Database_Page f2 = new Members_Database_Page();
             f2.Show();
             Visible = false;
@@ -81,16 +125,13 @@ namespace draft3
             Visible = false;
         }
 
-        private void AdminDashboard_Load(object sender, EventArgs e) // Settings (Load Dashboard)
-        {
-            // Functionality not implemented
-        }
+        
 
-        private void button6_Click(object sender, EventArgs e)
+        
+
+        private void fullNameLabel_Click(object sender, EventArgs e)
         {
-            UserSettings f2 = new UserSettings();
-            f2.Show();
-            Visible = false;
+
         }
     }
 }
