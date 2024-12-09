@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 661);
+            this.panel1.Size = new System.Drawing.Size(284, 910);
             this.panel1.TabIndex = 0;
             // 
             // button11
@@ -153,7 +153,7 @@
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(15, 611);
+            this.button6.Location = new System.Drawing.Point(15, 860);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(269, 50);
             this.button6.TabIndex = 9;
@@ -256,7 +256,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 144);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(15, 517);
+            this.panel3.Size = new System.Drawing.Size(15, 766);
             this.panel3.TabIndex = 2;
             // 
             // panel2
@@ -293,7 +293,7 @@
             this.button7.BackColor = System.Drawing.Color.Maroon;
             this.button7.Font = new System.Drawing.Font("Arial", 16F);
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(974, 730);
+            this.button7.Location = new System.Drawing.Point(1248, 860);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(93, 38);
             this.button7.TabIndex = 2;
@@ -305,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 661);
+            this.ClientSize = new System.Drawing.Size(1353, 910);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);

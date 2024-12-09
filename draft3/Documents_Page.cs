@@ -17,7 +17,8 @@ namespace draft3
             InitializeComponent();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        
+        private void button12_Click(object sender, EventArgs e)
         {
             AdminDashboard events = new AdminDashboard();
             this.Hide();
