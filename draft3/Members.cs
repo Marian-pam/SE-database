@@ -11,12 +11,12 @@ using System.Data.SqlClient; // Add this for SQL Server operations
 
 namespace draft3
 {
-    public partial class Members_Database_Page : Form
+    public partial class Members : Form
     {
         private bool isAlphabetical = false; // Flag to track sorting order
         private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True";
 
-        public Members_Database_Page()
+        public Members()
         {
             InitializeComponent();
             LoadData(); // Load data into the ListBox when the form is opened

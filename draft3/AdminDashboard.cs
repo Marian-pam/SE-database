@@ -72,7 +72,7 @@ namespace draft3
         private void button2_Click(object sender, EventArgs e) // Placeholder (Events Database)
         {
             
-            Members_Database_Page f2 = new Members_Database_Page();
+            Members f2 = new Members();
             f2.Show();
             Visible = false;
         }

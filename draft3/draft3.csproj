@@ -176,11 +176,11 @@
     <Compile Include="Interests_Page.Designer.cs">
       <DependentUpon>Interests_Page.cs</DependentUpon>
     </Compile>
-    <Compile Include="Members_Database_Page.cs">
+    <Compile Include="Members.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Members_Database_Page.Designer.cs">
-      <DependentUpon>Members_Database_Page.cs</DependentUpon>
+    <Compile Include="Members.Designer.cs">
+      <DependentUpon>Members.cs</DependentUpon>
     </Compile>
     <Compile Include="UserSettings.cs">
       <SubType>Form</SubType>
@@ -243,8 +243,8 @@
     <EmbeddedResource Include="Membership.resx">
       <DependentUpon>Membership.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Members_Database_Page.resx">
-      <DependentUpon>Members_Database_Page.cs</DependentUpon>
+    <EmbeddedResource Include="Members.resx">
+      <DependentUpon>Members.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserSettings.resx">
       <DependentUpon>UserSettings.cs</DependentUpon>

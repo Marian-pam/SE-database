@@ -8,43 +8,45 @@ namespace draft3
 {
     public partial class Events : Form
     {
-        private bool isAlphabetical = false; // Flag to track sorting order
+        private bool isAlphabetical = false; // Keeps track of whether events are sorted alphabetically
 
         public Events()
         {
-            InitializeComponent(); // Initialize the form and its components
-            LoadData(); // Load data into the ListBox when the form is opened
+            InitializeComponent(); // Sets up the form and its elements
+            LoadData(); // Loads the event data into the ListBox as soon as the form opens
         }
 
         /// <summary>
-        /// Fetches data from the database and populates the ListBox.
+        /// This method gets the list of events from the database and shows them in the ListBox.
         /// </summary>
         private void LoadData()
         {
             try
             {
-                // SQL query to select data from the Events table
-                string query = "SELECT [Event name] FROM Events"; // Enclose column name in brackets as it is 2 words instead of 1
+                // Here's the SQL query fetches all event names from the Events table.
+                // Column name has spaces, so it's wrapped in brackets.
+                string query = "SELECT [Event name] FROM Events";
 
-                // Fetch data using the DatabaseHelper method
+                // Use the DatabaseHelper class to get the event data from the database.
+                // The second parameter tells it which column to focus on.
                 List<string> data = DatabaseHelper.GetData(query, "Event name");
 
-                // Apply sorting if the alphabetical flag is true
+                // If the user toggled alphabetical sorting, let's sort the list before showing it.
                 if (isAlphabetical)
                 {
-                    data = data.OrderBy(item => item).ToList(); // Sort alphabetically
+                    data = data.OrderBy(item => item).ToList(); // Sort the events alphabetically
                 }
 
-                // Clear the ListBox to avoid duplicate entries
+                // Clear the ListBox first to avoid doubling up on entries.
                 listBox1.Items.Clear();
 
-                // Populate the ListBox with data from the table
+                // Loop through each event and add it to the ListBox for display.
                 foreach (string item in data)
                 {
-                    listBox1.Items.Add(item);
+                    listBox1.Items.Add(item); // Adding each event to the UI
                 }
 
-                // Notify if no data was found in the table
+                // If the database is empty, let the user know there are no events.
                 if (data.Count == 0)
                 {
                     MessageBox.Show("No events found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -52,56 +54,56 @@ namespace draft3
             }
             catch (Exception ex)
             {
-                // Display any errors that occur during the data retrieval
+                // Something went wrong while fetching or displaying data—let the user know.
                 MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Events_Load(object sender, EventArgs e)
         {
-            // Optional error message in case it doesn't work
+            // This runs when the form finishes loading. It's a good spot for initializing.
             try
             {
+                // Fills the dataset using the table adapter.
                 this.eventsTableAdapter.Fill(this.togetherCultureDataSet.Events);
             }
             catch (Exception ex)
             {
+                // Oops! Something went wrong with loading from the dataset.
                 MessageBox.Show($"Error loading data from DataSet: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Handle selection change in the ListBox if needed
+            // This runs when the user picks an item from the ListBox.
             string selectedEvent = listBox1.SelectedItem?.ToString();
             if (!string.IsNullOrEmpty(selectedEvent))
             {
+                // Show a pop-up telling the user which event they picked.
                 MessageBox.Show($"You selected: {selectedEvent}", "Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            // Placeholder for future functionality—currently not doing anything.
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+            // Placeholder for future functionality—currently not doing anything.
         }
 
         private void ToggleSortButton_Click_1(object sender, EventArgs e)
         {
-            // Toggle the sorting order flag
+            // Flip the sorting order flag (true to false or vice versa).
             isAlphabetical = !isAlphabetical;
 
-            // Reload the data with the new sorting order
+            // Refresh the ListBox to apply the new sorting order.
             LoadData();
 
-            // Update the button text to indicate the current state
+            // Update the button text to let the user know what the sorting mode is now.
             Button button = sender as Button;
             if (button != null)
             {
@@ -111,9 +113,10 @@ namespace draft3
 
         private void button7_Click(object sender, EventArgs e)
         {
+            // This opens the AdminDashboard form and hides the current one.
             AdminDashboard f2 = new AdminDashboard();
             f2.Show();
-            Visible = false;
+            Visible = false; // Hides the current Events form but doesn't close it.
         }
     }
 }

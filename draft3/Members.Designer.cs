@@ -1,6 +1,6 @@
 ﻿namespace draft3
 {
-    partial class Members_Database_Page
+    partial class Members
     {
         /// <summary>
         /// Required designer variable.
