@@ -232,7 +232,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(269, 50);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Members Database";
+            this.button2.Text = "Members";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -324,6 +324,7 @@
             this.emailLabel.TabIndex = 4;
             this.emailLabel.Text = "label1";
             this.emailLabel.Visible = false;
+            this.emailLabel.Click += new System.EventHandler(this.emailLabel_Click);
             // 
             // membershipLabel
             // 
@@ -334,6 +335,7 @@
             this.membershipLabel.TabIndex = 5;
             this.membershipLabel.Text = "label1";
             this.membershipLabel.Visible = false;
+            this.membershipLabel.Click += new System.EventHandler(this.membershipLabel_Click);
             // 
             // AdminDashboard
             // 

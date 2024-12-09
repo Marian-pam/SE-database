@@ -132,6 +132,16 @@ namespace draft3
         {
 
         }
+
+        private void membershipLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

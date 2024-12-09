@@ -113,5 +113,124 @@ namespace draft3
                 button.Text = isAlphabetical ? "Sort: Alphabetical" : "Sort: Original";
             }
         }
+
+        private void Members_Database_Page_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Prompt for member details
+                string firstName = Prompt.ShowDialog("Enter First Name:", "Add Member");
+                string surname = Prompt.ShowDialog("Enter Surname:", "Add Member");
+                string membershipStatus = Prompt.ShowDialog("Enter Membership Status:", "Add Member");
+
+                // Ensure all fields are filled
+                if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(surname) || string.IsNullOrWhiteSpace(membershipStatus))
+                {
+                    MessageBox.Show("All fields must be filled to add a member.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO [Founding Members] ([First Name], [Surname], [Membership Status]) VALUES (@FirstName, @Surname, @MembershipStatus)";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@FirstName", firstName);
+                        command.Parameters.AddWithValue("@Surname", surname);
+                        command.Parameters.AddWithValue("@MembershipStatus", membershipStatus);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Member added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadData(); // Refresh the list
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add member.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Prompt for member details to delete
+                string firstName = Prompt.ShowDialog("Enter First Name of the Member to Remove:", "Remove Member");
+                string surname = Prompt.ShowDialog("Enter Surname of the Member to Remove:", "Remove Member");
+
+                // Ensure fields are filled
+                if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(surname))
+                {
+                    MessageBox.Show("First Name and Surname must be provided to remove a member.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "DELETE FROM [Founding Members] WHERE [First Name] = @FirstName AND [Surname] = @Surname";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@FirstName", firstName);
+                        command.Parameters.AddWithValue("@Surname", surname);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Member removed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadData(); // Refresh the list
+                        }
+                        else
+                        {
+                            MessageBox.Show("No matching member found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public static class Prompt
+        {
+            public static string ShowDialog(string text, string caption)
+            {
+                Form prompt = new Form()
+                {
+                    Width = 400,
+                    Height = 200,
+                    FormBorderStyle = FormBorderStyle.FixedDialog,
+                    Text = caption,
+                    StartPosition = FormStartPosition.CenterScreen
+                };
+                Label textLabel = new Label() { Left = 20, Top = 20, Text = text, Width = 340 };
+                TextBox inputBox = new TextBox() { Left = 20, Top = 50, Width = 340 };
+                Button confirmation = new Button() { Text = "OK", Left = 270, Width = 90, Top = 100, DialogResult = DialogResult.OK };
+                confirmation.Click += (sender, e) => { prompt.Close(); };
+                prompt.Controls.Add(confirmation);
+                prompt.Controls.Add(textLabel);
+                prompt.Controls.Add(inputBox);
+                prompt.AcceptButton = confirmation;
+
+                return prompt.ShowDialog() == DialogResult.OK ? inputBox.Text : string.Empty;
+            }
+        }
+
     }
 }
