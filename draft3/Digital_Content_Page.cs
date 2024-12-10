@@ -23,5 +23,10 @@ namespace draft3
             this.Hide();
             events.Show();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
