@@ -124,7 +124,7 @@
             // 
             // listBox1
             // 
-            this.listBox1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.Font = new System.Drawing.Font("Arial", 20.25F);
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 32;
             this.listBox1.Items.AddRange(new object[] {

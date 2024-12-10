@@ -62,6 +62,17 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Sharehouse",
+            "Citizens\' Studio",
+            "Repair Cafe",
+            "Philosophy Group",
+            "Board Game Hour",
+            "Partner Yoga",
+            "Art Class",
+            "Connections Meal",
+            "Turn Up and Write",
+            "Lunch and Learn"});
             this.listBox1.Location = new System.Drawing.Point(189, 129);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(433, 147);
@@ -105,6 +116,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(251, 13);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
