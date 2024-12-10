@@ -142,6 +142,13 @@ namespace draft3
         {
 
         }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            Welcome f2 = new Welcome();
+            f2.Show();
+            Visible = false;
+        }
     }
 }
 

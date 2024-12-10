@@ -48,6 +48,7 @@
             this.fullNameLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
             this.membershipLabel = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -337,11 +338,24 @@
             this.membershipLabel.Visible = false;
             this.membershipLabel.Click += new System.EventHandler(this.membershipLabel_Click);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Firebrick;
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Location = new System.Drawing.Point(974, 611);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(93, 38);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Logout";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1079, 661);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.membershipLabel);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.fullNameLabel);
@@ -385,5 +399,6 @@
         private System.Windows.Forms.Label fullNameLabel;
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label membershipLabel;
+        private System.Windows.Forms.Button button6;
     }
 }
