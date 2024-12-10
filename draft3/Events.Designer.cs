@@ -106,6 +106,7 @@
             // 
             // ToggleSortButton
             // 
+            this.ToggleSortButton.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToggleSortButton.Location = new System.Drawing.Point(628, 129);
             this.ToggleSortButton.Name = "ToggleSortButton";
             this.ToggleSortButton.Size = new System.Drawing.Size(88, 23);
@@ -127,7 +128,8 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Firebrick;
+            this.button7.BackColor = System.Drawing.Color.Maroon;
+            this.button7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button7.Location = new System.Drawing.Point(726, 417);
             this.button7.Name = "button7";
