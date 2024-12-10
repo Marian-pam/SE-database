@@ -321,7 +321,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Firebrick;
+            this.button6.BackColor = System.Drawing.Color.Maroon;
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.Location = new System.Drawing.Point(974, 611);
             this.button6.Name = "button6";
