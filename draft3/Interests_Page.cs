@@ -17,7 +17,8 @@ namespace draft3
             InitializeComponent();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        
+        private void button6_Click(object sender, EventArgs e)
         {
             AdminDashboard f2 = new AdminDashboard();
             f2.Show();
