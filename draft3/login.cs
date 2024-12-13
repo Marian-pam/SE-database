@@ -17,22 +17,22 @@ namespace draft3
 
         private void label4_Click(object sender, EventArgs e)
         {
-            // Add relevant code here or leave empty if not required.
+            
         }
 
         private void PasswordTxtBox_TextChanged(object sender, EventArgs e)
         {
-            // Add relevant code here or leave empty if not required.
+            
         }
 
         private void login_Load(object sender, EventArgs e)
         {
-            // Add relevant code here or leave empty if not required.
+            
         }
 
         private void ForgotPassword_Click(object sender, EventArgs e)
         {
-            // Code for forgot password functionality can go here.
+            
             ForgotPassword f2 = new ForgotPassword();
             f2.Show();
             Visible = false;
@@ -40,7 +40,7 @@ namespace draft3
 
         private void EmailTxtBox_TextChanged(object sender, EventArgs e)
         {
-            // Add relevant code here or leave empty if not required.
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
