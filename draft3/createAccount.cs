@@ -18,36 +18,37 @@ namespace draft3
 
         private void createAccount_Load(object sender, EventArgs e)
         {
-            // You can add any initialization code here if needed
+            
         }
 
         private void textBox2lastName(object sender, EventArgs e)
         {
-            // Event handler for lastName textbox
+            
         }
 
         private void textBox4firstName(object sender, EventArgs e)
         {
-            // Event handler for firstName textbox
+          
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            // Panel paint event handler
+            
         }
 
         private void textBox1Password2(object sender, EventArgs e)
         {
-            // Event handler for Password2 textbox
+            
         }
 
         private void textBox6Password(object sender, EventArgs e)
         {
-            // Event handler for Password textbox
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            // the redirect to the login
             login f2 = new login();
             f2.Show();
             Visible = false;
@@ -55,11 +56,12 @@ namespace draft3
 
         private void textBox5Email(object sender, EventArgs e)
         {
-            // Event handler for Email textbox
+           
         }
 
         private void button1signUp_Click(object sender, EventArgs e)
         {
+            // Changed to non-local database for all access
             string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -73,13 +75,14 @@ namespace draft3
                     command.Parameters.AddWithValue("@Email", textBox5.Text);
                     command.Parameters.AddWithValue("@Password", textBox6.Text);
 
-                    // Parse the DOB string to DateTime
+                    // Changing the DOB string to DateTime
                     if (DateTime.TryParse(textBox3DOB.Text, out DateTime dob))
                     {
                         command.Parameters.AddWithValue("@DOB", dob);
                     }
                     else
                     {
+                        //Validation for DOB
                         MessageBox.Show("Invalid date format for DOB. Please use a valid date format.");
                         return;
                     }
@@ -92,7 +95,7 @@ namespace draft3
                         if (result > 0)
                         {
                             MessageBox.Show("Account created successfully!");
-                            // Optionally, you can clear the textboxes or navigate to another form here
+                           
                         }
                         else
                         {
