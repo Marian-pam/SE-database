@@ -20,7 +20,7 @@ namespace draft3
         {
             try
             {
-                // Here's the SQL query fetches all event names from the Events table. Column name has spaces, so it's wrapped in brackets.
+                // SQL query fetches all event names from the Events table. Column name has spaces, so it's wrapped in brackets.
                 string query = "SELECT [Event name] FROM Events";
 
                 // Use the DatabaseHelper class to get the event data from the database.
