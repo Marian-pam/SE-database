@@ -12,26 +12,20 @@ namespace draft3
 
         public Events()
         {
-            InitializeComponent(); // Sets up the form and its elements
-            LoadData(); // Loads the event data into the ListBox as soon as the form opens
+            InitializeComponent(); 
+            LoadData(); 
         }
 
-        /// <summary>
-        /// This method gets the list of events from the database and shows them in the ListBox.
-        /// </summary>
         private void LoadData()
         {
             try
             {
-                // Here's the SQL query fetches all event names from the Events table.
-                // Column name has spaces, so it's wrapped in brackets.
+                // Here's the SQL query fetches all event names from the Events table. Column name has spaces, so it's wrapped in brackets.
                 string query = "SELECT [Event name] FROM Events";
 
                 // Use the DatabaseHelper class to get the event data from the database.
-                // The second parameter tells it which column to focus on.
                 List<string> data = DatabaseHelper.GetData(query, "Event name");
 
-                // If the user toggled alphabetical sorting, let's sort the list before showing it.
                 if (isAlphabetical)
                 {
                     data = data.OrderBy(item => item).ToList(); // Sort the events alphabetically
@@ -43,10 +37,9 @@ namespace draft3
                 // Loop through each event and add it to the ListBox for display.
                 foreach (string item in data)
                 {
-                    listBox1.Items.Add(item); // Adding each event to the UI
+                    listBox1.Items.Add(item);
                 }
 
-                // If the database is empty, let the user know there are no events.
                 if (data.Count == 0)
                 {
                     MessageBox.Show("No events found.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -61,7 +54,7 @@ namespace draft3
 
         private void Events_Load(object sender, EventArgs e)
         {
-            // This runs when the form finishes loading. It's a good spot for initializing.
+
             try
             {
                 // Fills the dataset using the table adapter.
@@ -69,7 +62,7 @@ namespace draft3
             }
             catch (Exception ex)
             {
-                // Oops! Something went wrong with loading from the dataset.
+
                 MessageBox.Show($"Error loading data from DataSet: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -87,17 +80,16 @@ namespace draft3
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            // Placeholder for future functionality—currently not doing anything.
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            // Placeholder for future functionality—currently not doing anything.
+
         }
 
         private void ToggleSortButton_Click_1(object sender, EventArgs e)
         {
-            // Flip the sorting order flag (true to false or vice versa).
             isAlphabetical = !isAlphabetical;
 
             // Refresh the ListBox to apply the new sorting order.
@@ -113,10 +105,9 @@ namespace draft3
 
         private void button7_Click(object sender, EventArgs e)
         {
-            // This opens the AdminDashboard form and hides the current one.
             AdminDashboard f2 = new AdminDashboard();
             f2.Show();
-            Visible = false; // Hides the current Events form but doesn't close it.
+            Visible = false;
         }
     }
 }

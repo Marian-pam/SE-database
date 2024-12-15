@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient; // Required for interacting with the SQL Server database
+using System.Data.SqlClient; 
 
 namespace draft3
 {
@@ -16,25 +16,22 @@ namespace draft3
         // This flag determines whether the member list is sorted alphabetically
         private bool isAlphabetical = false;
 
-        // Connection string for the database (adjust as needed for your setup)
+        // Connection string for the database
         private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\togetherCulture.mdf;Integrated Security=True";
 
         public Members()
         {
-            InitializeComponent(); // Sets up the form and its controls
-            LoadData(); // Load and display member data when the form opens
+            InitializeComponent(); 
+            LoadData(); 
         }
 
-        /// <summary>
-        /// Fetches member data from the database and displays it in the ListBox.
-        /// </summary>
         private void LoadData()
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    connection.Open(); // Open a connection to the database
+                    connection.Open();
 
                     // SQL query to fetch member details
                     string query = "SELECT [First Name], [Surname], [Membership Status] FROM [Founding Members]";
@@ -50,13 +47,11 @@ namespace draft3
                                 data.Add(item);
                             }
 
-                            // Sort the data alphabetically if the flag is set
                             if (isAlphabetical)
                             {
                                 data = data.OrderBy(item => item).ToList();
                             }
-
-                            // Clear the ListBox to avoid duplicate entries
+                      
                             listBox1.Items.Clear();
 
                             // Add the retrieved data to the ListBox
@@ -76,14 +71,13 @@ namespace draft3
             }
             catch (Exception ex)
             {
-                // Show an error message if data retrieval fails
                 MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Members_Database_Page_Load(object sender, EventArgs e)
         {
-            // Event triggered when the form loads. Add any necessary initialization here.
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -159,10 +153,9 @@ namespace draft3
 
         private void button7_Click(object sender, EventArgs e)
         {
-            // Open the Admin Dashboard form
             AdminDashboard f2 = new AdminDashboard();
             f2.Show();
-            Visible = false; // Hide the Members form
+            Visible = false;
         }
 
         private void ToggleSortButton_Click_1(object sender, EventArgs e)
@@ -181,7 +174,7 @@ namespace draft3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Add a new member by prompting the user for details
+            // Add a new member by asking the user for details
             try
             {
                 string firstName = Prompt.ShowDialog("Enter First Name:", "Add Member");
@@ -267,7 +260,7 @@ namespace draft3
 
         public static class Prompt
         {
-            // A utility to show a dialog box and get user input
+
             public static string ShowDialog(string text, string caption)
             {
                 Form prompt = new Form()
